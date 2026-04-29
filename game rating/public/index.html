@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 游戏评分网站</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">AI Game Rating</p>
+          <h1>游戏评分网站</h1>
+          <p class="subtitle">
+            输入游戏名称，AI 将根据固定评分体系生成综合评分、维度评分和简短评语。
+          </p>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="card input-card">
+          <h2>生成游戏评分</h2>
+
+          <form id="reviewForm" class="form">
+            <input
+              id="gameNameInput"
+              type="text"
+              placeholder="例如：原神、黑神话：悟空、王者荣耀"
+              autocomplete="off"
+            />
+            <button id="generateBtn" type="submit">生成评分</button>
+          </form>
+
+          <div class="actions">
+            <button id="regenerateBtn" class="secondary-btn" type="button" hidden>
+              重新生成当前游戏评分
+            </button>
+          </div>
+
+          <p id="statusText" class="status"></p>
+        </section>
+
+        <section id="resultSection" class="card result-card empty">
+          <div class="empty-state">
+            <div class="empty-icon">🎮</div>
+            <h2>等待生成评分</h2>
+            <p>生成结果会显示在这里。</p>
+          </div>
+        </section>
+
+        <aside class="card history-card">
+          <div class="history-header">
+            <h2>本地历史记录</h2>
+            <button id="refreshHistoryBtn" class="text-btn" type="button">
+              刷新
+            </button>
+          </div>
+          <div id="historyList" class="history-list"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

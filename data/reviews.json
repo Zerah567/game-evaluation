@@ -1,0 +1,2682 @@
+[
+  {
+    "gameName": "??",
+    "finalScore": 50,
+    "finalScore10": 5,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 5,
+        "score100": 50,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 5,
+        "score100": 50,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 5,
+            "score100": 50,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "无法确认游戏信息，基于一般水平评估"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "信息不足，基于一般水平保守评估",
+    "createdAt": "2026-04-29T07:37:54.678Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "艾尔登法环",
+    "finalScore": 79.6,
+    "finalScore10": 7.96,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 8.5,
+        "score100": 85,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 8.1,
+            "score100": 81,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 10,
+                "score100": 100,
+                "reason": "美术设计登峰造极，场景、怪物、角色风格统一且极具震撼力。"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 3,
+                "score100": 30,
+                "reason": "传统买断制，无增值服务或DLC季票创新。"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "将魂系机制与开放世界完美融合，自由探索与高难度战斗结合独特。"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 9,
+                "score100": 90,
+                "reason": "碎片化叙事与深邃的黑暗奇幻世界观极具开创性。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 8.5,
+            "score100": 85,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "魂系游戏市场规模中等，但开放世界扩大了受众。"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9,
+                "score100": 90,
+                "reason": "同类无直接竞品，品质远超其他魂like游戏。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 8.5,
+            "score100": 85,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 5,
+                "score100": 50,
+                "reason": "买断制不依赖买量，口碑传播为主。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 10,
+                "score100": 100,
+                "reason": "发售前后引爆社交媒体，玩家持续创作话题。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "FromSoftware口碑加成，但非知名IP改编。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 9,
+                "score100": 90,
+                "reason": "累计销量超2500万份，用户规模庞大。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "高难度与探索性极适合直播，观看性强。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 7.6,
+        "score100": 76,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 9.4,
+            "score100": 94,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "碎片叙事引发深度讨论，世界观宏大且引人入胜。"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 10,
+                "score100": 100,
+                "reason": "美术风格独特，场景设计惊艳，荣获奖项认可。"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "配乐烘托氛围，Boss战音乐激昂，但曲目记忆度略逊前作。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 9,
+            "score100": 90,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8,
+                "score100": 80,
+                "reason": "操作硬核但反馈精准，新手上手有一定门槛。"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "探索、战斗、成长系统高度融合，自由度极高。"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "探索未知与战胜强敌的驱动力极强，多结局激励重复游玩。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 9.1,
+            "score100": 91,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 10,
+                "score100": 100,
+                "reason": "地图巨大，隐藏内容丰富，武器战灰魔法等数量惊人。"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "箱庭式关卡与开放世界无缝衔接，立体设计精妙。"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 5,
+                "score100": 50,
+                "reason": "仅留言、血迹与PVP模式，弱社交设计。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.4,
+            "score100": 64,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "新手引导极少，依靠玩家自行探索，对新手不友好。"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "角色培养目标开放，缺乏明确指引，由玩家自定。"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 7,
+                "score100": 70,
+                "reason": "多周目与PVP提供长线目标，但无明确规划提示。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 1.5,
+            "score100": 15,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 2,
+                "score100": 20,
+                "reason": "买断制无内购，付费引导不适用。"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 1,
+                "score100": 10,
+                "reason": "无内购内容，付费深度为零。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "开放世界魂系巅峰，艺术性与玩法深度无可挑剔，但营收模式单一。",
+    "createdAt": "2026-04-29T07:39:06.258Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "红色沙漠",
+    "finalScore": 74.2,
+    "finalScore10": 7.42,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 7.3,
+        "score100": 73,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 7.1,
+            "score100": 71,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "基于Pearl Abyss顶尖引擎，画质出色，但美术风格偏写实，创新度一般。"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "商业模式信息不明确，预计为买断+内购，模式传统。"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "开放世界动作MMO，融合据点占领、载具等，但核心玩法未跳出同类框架。"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "原创IP，背景参考中世纪，故事未见突出亮点。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 7.5,
+            "score100": 75,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "开放世界MMO市场规模较大，全球用户基础存在。"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "相比主流MMO在画面和动作上有优势，但IP和社区积累不足。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 7.2,
+            "score100": 72,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 7,
+                "score100": 70,
+                "reason": "韩国厂商买量经验丰富，但全球推广成本高。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "多次展会亮相，关注度高，话题性较强。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "全新IP，无原生粉丝基础。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 7,
+                "score100": 70,
+                "reason": "目标全球，但MMO品类增长放缓，预计中等规模。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "高画质、开放探索和战斗适合直播展示。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 7.5,
+        "score100": 75,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 8.1,
+            "score100": 81,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "剧情演示有一定氛围，但未展现完整叙事深度。"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9,
+                "score100": 90,
+                "reason": "画面表现顶级，光影、材质、场景细节出色。"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "配乐恢弘，契合史诗氛围，但辨识度一般。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7.8,
+            "score100": 78,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8,
+                "score100": 80,
+                "reason": "动作流畅，操作手感良好，但复杂系统可能增加学习成本。"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "融合多种玩法，但需上线后验证平衡性与重复可玩性。"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "任务、探索、PvP等多维度目标驱动。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7.5,
+            "score100": 75,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "开放世界内容丰富，但长期更新计划尚不明朗。"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "野外和副本设计有亮点，但未突破传统框架。"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "有公会和多人活动，但社交系统未显示出显著创新。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 7.2,
+            "score100": 72,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "预计有新手引导，但复杂系统可能需更多辅助。"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "装备和等级提升目标清晰，符合MMO常规。"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 7,
+                "score100": 70,
+                "reason": "官方提及季节更新，但具体规划未完全公开。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.8,
+            "score100": 68,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "买断制下内购引导可能较含蓄，清晰度待观察。"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "内购包含皮肤、道具等，付费深度中等。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "画面顶尖但创新有限，尚待上线验证的开放世界MMO。",
+    "createdAt": "2026-04-29T07:42:31.996Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "PEAK",
+    "finalScore": 60.6,
+    "finalScore10": 6.06,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 5.1,
+        "score100": 51,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 6.1,
+            "score100": 61,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "美术风格简洁清新，但缺乏创新性，与其他脑训练游戏类似"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "采用常见订阅制，商业模式创新度一般"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "整合多种认知训练小游戏，但并非全新玩法"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "没有剧情或IP，叙事创新度低"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 6.5,
+            "score100": 65,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "脑力训练游戏市场规模较大，用户需求持续存在"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6,
+                "score100": 60,
+                "reason": "与Lumosity等头部产品存在功能差距，但用户基数尚可"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 4.3,
+            "score100": 43,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 6,
+                "score100": 60,
+                "reason": "买量成本中等，需持续投放维持增长"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "话题性一般，不易引发广泛讨论"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 1,
+                "score100": 10,
+                "reason": "无IP加成"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 8,
+                "score100": 80,
+                "reason": "全球用户规模较大，下载量数千万"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 4,
+                "score100": 40,
+                "reason": "游戏内容单调，直播观赏性低"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 6.7,
+        "score100": 67,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 6.4,
+            "score100": 64,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5,
+                "score100": 50,
+                "reason": "没有剧情，纯功能型设计"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "美术风格清新舒适，配色柔和"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "背景音乐舒缓，有助于专注"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 6.9,
+            "score100": 69,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8,
+                "score100": 80,
+                "reason": "触控操作简单直接，学习成本低"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "小游戏种类丰富，难度渐进合理"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "主要驱动力来自分数提升，长期动力不足"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 6.7,
+            "score100": 67,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 7,
+                "score100": 70,
+                "reason": "提供多种训练模块，内容丰富度尚可"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 7,
+                "score100": 70,
+                "reason": "关卡难度循序渐进，有每日挑战"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 5,
+                "score100": 50,
+                "reason": "社交元素较弱，仅有排行榜功能"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.9,
+            "score100": 69,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "新手引导清晰，快速上手"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "提升认知能力的目标明确，但较抽象"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 6,
+                "score100": 60,
+                "reason": "长期体验规划一般，缺乏持续新鲜感"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.5,
+            "score100": 65,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "付费引导清晰，订阅制展示明确"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6,
+                "score100": 60,
+                "reason": "付费深度有限，以订阅为主"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "一款经典的脑力训练游戏，美术清新，操作简单，但长期驱动力和社交性较弱。",
+    "createdAt": "2026-04-29T08:46:36.397Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "异环",
+    "finalScore": 72,
+    "finalScore10": 7.2,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 7.2,
+        "score100": 72,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 7.4,
+            "score100": 74,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "二次元+都市怪谈风格，美术辨识度高，光影和场景设计出色"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "采用常见抽卡+月卡通行证模式，无显著创新"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "开放世界融入都市探索、载具驾驶等元素，有一定玩法融合创新"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "都市怪谈题材叙事，有新颖点但IP尚未形成，剧情表现中上"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 7.3,
+            "score100": 73,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "二次元开放世界品类市场规模大且持续增长"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "与头部竞品（原神等）差距明显，但差异化都市题材可缩小差距"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 7.1,
+            "score100": 71,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 7,
+                "score100": 70,
+                "reason": "首曝预约量较高，买量空间大，但成本需关注"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "幻塔团队新作+都市开放世界，话题度较高"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "全新IP，无原有粉丝基础，IP加成有限"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 7,
+                "score100": 70,
+                "reason": "预约数百万，预期首月用户规模较大"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "开放世界+都市内容适合直播展示，互动性强"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 7.2,
+        "score100": 72,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 8.1,
+            "score100": 81,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "都市怪谈剧情有新鲜感，但叙事节奏和深度待验证"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9,
+                "score100": 90,
+                "reason": "美术品质顶尖，风格统一，角色和场景精细度高"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "音乐氛围契合都市主题，但未达到出圈水平"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7.3,
+            "score100": 73,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "操作流畅，但存在部分硬直和交互优化空间"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "探索、战斗、谜题结合较好，都市玩法新颖"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "角色收集养成+剧情推进驱动，但长线动力可能不足"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 6.9,
+            "score100": 69,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 7,
+                "score100": 70,
+                "reason": "首测内容量中等，开放世界地图较大但填充度待提高"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 7,
+                "score100": 70,
+                "reason": "关卡设计有亮点，但部分场景指引不够清晰"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "社交玩法以组队和公会为主，深度一般"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.8,
+            "score100": 68,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "新手引导较清晰，但部分系统说明不充分"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "养成目标明确，但角色突破/材料获取路径复杂"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "长线规划有版本更新承诺，但具体计划未披露"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.5,
+            "score100": 65,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6,
+                "score100": 60,
+                "reason": "付费点展示尚可，但引导不够自然"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "抽卡+月卡+通行证深度适中，重氪空间较大"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "美术风格独特，玩法融合都市元素，但付费体系尚待验证",
+    "createdAt": "2026-04-29T09:07:56.497Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "无限大",
+    "finalScore": 73.6,
+    "finalScore10": 7.36,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 7.6,
+        "score100": 76,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 7.6,
+            "score100": 76,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "二次元风格融合都市元素，美术表现力惊艳，技术演示中细节丰富，差异化明显。"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "网易倾向数值付费+外观，但具体模式未公布，暂按典型开放世界免费制保守评分。"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "开放世界+都市+动作RPG，已有原神等竞品，创新中等偏上，但核心玩法细节未知。"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "原创IP，叙事围绕都市超能力，概念新鲜，但尚无完整剧情展示，保守评分。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 7.8,
+            "score100": 78,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "开放世界+二次元市场大，高画质类已证明潜力，受众广泛。"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "与GTA、原神、米哈游等差距较大，但网易资源和技术有望缩小差距，目前仍在开发。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 7.5,
+            "score100": 75,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 7,
+                "score100": 70,
+                "reason": "网易有成熟买量体系，但品类竞争激烈，买量成本高，保守估计。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "首曝至今话题热度高，玩家期待排名前列，社交讨论活跃。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "纯原创IP无基础粉丝，但网易品牌有一定号召力。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 8,
+                "score100": 80,
+                "reason": "目标用户群大，二次元开放世界玩家基数可观，但需时间验证。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "高画质、都市开放世界适合直播，探索和战斗内容有观赏性。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 7.2,
+        "score100": 72,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 8.4,
+            "score100": 84,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "都市超能力题材有潜力，但剧情细节未公开，暂基于预告内容评分。"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "技术演示中画质顶级，二次元渲染精细，光影和场景细节出色。"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "音乐目前曝光较少，但网易一贯水准较高，暂给中等偏上。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7.2,
+            "score100": 72,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "动作RPG操作，尚未有实际体验，但从演示看流畅度尚可，保守评分。"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "开放世界+都市探索+战斗，玩法框架明确，但深度和细节未知。"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "都市探索、角色养成、剧情驱动，驱动力较丰富，但实际体验待验证。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7,
+            "score100": 70,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 7,
+                "score100": 70,
+                "reason": "开放世界内容丰富度看齐一流作品，但具体体量未明，保守评分。"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 7,
+                "score100": 70,
+                "reason": "都市关卡设计有潜力，但未见实际关卡结构，保守评分。"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 7,
+                "score100": 70,
+                "reason": "多人在线开放世界，社交元素为标配，具体玩法待公布。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.5,
+            "score100": 65,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "未公布新手引导，但网易经验丰富，预计水平中等偏上，保守评分。"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "角色养成、等级等目标设计常见，但具体系统未公布。"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 6,
+                "score100": 60,
+                "reason": "长线运营计划未曝光，作为重度游戏需要谨慎对待，保守评分。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.5,
+            "score100": 65,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6,
+                "score100": 60,
+                "reason": "付费点设计未公布，参考网易产品，引导可能偏常规。"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "预期抽卡+外观等，深度中等，但具体数值未知。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "极具视觉冲击的开放世界都市题材，二次元画风惊艳，但玩法及商业化细节尚不明朗，期待值较高。",
+    "createdAt": "2026-04-29T09:09:45.812Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "诛仙世界",
+    "finalScore": 63.2,
+    "finalScore10": 6.32,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 5.9,
+        "score100": 59,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 5.5,
+            "score100": 55,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "美术表现不错，但雷同于其他仙侠游戏，创新度一般。"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 5,
+                "score100": 50,
+                "reason": "传统MMO付费，卖数值+时装，无明显创新。"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 4,
+                "score100": 40,
+                "reason": "传统MMO玩法，虽有飞行等，但整体缺乏创新。"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "基于经典诛仙IP，但剧情改编和叙事方式无突破。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 5.5,
+            "score100": 55,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "仙侠MMO市场规模较大，但逐渐萎缩。"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 4,
+                "score100": 40,
+                "reason": "相比《逆水寒》《剑网3》等头部竞品，差距明显。"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 6.1,
+            "score100": 61,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 5,
+                "score100": 50,
+                "reason": "买量成本较高，效果一般。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "公测前后有话题，但热度不如头部。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7,
+                "score100": 70,
+                "reason": "诛仙IP有一定用户基础，但不如一线IP。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 6,
+                "score100": 60,
+                "reason": "首日用户较多，但持续流失。"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "适合直播，但内容重复性强。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 6.6,
+        "score100": 66,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 7.1,
+            "score100": 71,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "剧情还原度尚可，但表现力一般。"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "画面精美，但优化存疑。"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "音乐中规中矩。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 5.4,
+            "score100": 54,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "操作流畅，但传统MMO交互复杂。"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 5,
+                "score100": 50,
+                "reason": "玩法设计常规，缺乏亮点。"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 5.5,
+                "score100": 55,
+                "reason": "以等级、装备驱动，后期动力不足。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 6.6,
+            "score100": 66,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 7,
+                "score100": 70,
+                "reason": "内容丰富，但同质化严重。"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 6,
+                "score100": 60,
+                "reason": "副本和场景设计尚可。"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 7,
+                "score100": 70,
+                "reason": "社交系统完善，但强制组队等可能不适。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 6.8,
+            "score100": 68,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "新手引导详细，但冗长。"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "目标清晰，日常任务导向。"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "长线规划明确，但重复度高。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 7.5,
+            "score100": 75,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "付费引导明显，指向充值和商城。"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "付费深度大，重氪与零氪差距大。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "美术出色IP加持，但玩法创新不足，MMO传统套路，后期留存堪忧。",
+    "createdAt": "2026-04-29T09:10:57.596Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "王者荣耀",
+    "finalScore": 86.2,
+    "finalScore10": 8.62,
+    "dimensions": [
+      {
+        "id": "game_positioning",
+        "name": "游戏定位",
+        "level": 1,
+        "weight": 0.4,
+        "score": 9.1,
+        "score100": 91,
+        "children": [
+          {
+            "id": "game_positioning_innovation",
+            "name": "游戏定位_创新度",
+            "level": 2,
+            "weight": 0.1,
+            "score": 6.6,
+            "score100": 66,
+            "children": [
+              {
+                "id": "game_positioning_innovation_art",
+                "name": "游戏定位_创新度_美术创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "美术风格写实且融入国风元素，品质高但创新不足"
+              },
+              {
+                "id": "game_positioning_innovation_business_model",
+                "name": "游戏定位_创新度_商业模式创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "F2P+内购模式，无显著商业模式创新"
+              },
+              {
+                "id": "game_positioning_innovation_gameplay",
+                "name": "游戏定位_创新度_玩法创新",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "MOBA玩法非原创，但对移动端有良好优化"
+              },
+              {
+                "id": "game_positioning_innovation_narrative_ip",
+                "name": "游戏定位_创新度_叙事IP创新",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6,
+                "score100": 60,
+                "reason": "依赖历史/神话角色，叙事创新有限"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_category",
+            "name": "游戏定位_品类情况",
+            "level": 2,
+            "weight": 0.3,
+            "score": 9.8,
+            "score100": 98,
+            "children": [
+              {
+                "id": "game_positioning_category_market_size",
+                "name": "游戏定位_品类情况_同类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "MOBA手游市场极其庞大"
+              },
+              {
+                "id": "game_positioning_category_competitor_gap",
+                "name": "游戏定位_品类情况_与头部竞品差距",
+                "level": 3,
+                "weight": 0.5,
+                "score": 10,
+                "score100": 100,
+                "reason": "国内MOBA手游头部，几乎没有竞品差距"
+              }
+            ]
+          },
+          {
+            "id": "game_positioning_user_growth_potential",
+            "name": "游戏定位_用户增长潜力",
+            "level": 2,
+            "weight": 0.6,
+            "score": 9.1,
+            "score100": 91,
+            "children": [
+              {
+                "id": "game_positioning_user_growth_potential_paid_acquisition",
+                "name": "游戏定位_用户增长潜力_买量评估",
+                "level": 3,
+                "weight": 0.1,
+                "score": 7,
+                "score100": 70,
+                "reason": "买量成本高但用户基数大，效果中等"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_topic",
+                "name": "游戏定位_用户增长潜力_话题性",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "长期占据热搜，话题性极高"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_ip_bonus",
+                "name": "游戏定位_用户增长潜力_IP加成",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "自有IP影响力强，联动频繁"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_user_scale",
+                "name": "游戏定位_用户增长潜力_用户规模",
+                "level": 3,
+                "weight": 0.1,
+                "score": 10,
+                "score100": 100,
+                "reason": "DAU过亿，用户规模顶级"
+              },
+              {
+                "id": "game_positioning_user_growth_potential_live_streaming_fit",
+                "name": "游戏定位_用户增长潜力_直播契合度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "观赛性强，直播热度极高"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay",
+        "name": "游戏性",
+        "level": 1,
+        "weight": 0.6,
+        "score": 8.3,
+        "score100": 83,
+        "children": [
+          {
+            "id": "gameplay_presentation",
+            "name": "游戏性_表现力",
+            "level": 2,
+            "weight": 0.2,
+            "score": 7.9,
+            "score100": 79,
+            "children": [
+              {
+                "id": "gameplay_presentation_story_theme",
+                "name": "游戏性_表现力_剧情题材表现",
+                "level": 3,
+                "weight": 0.3,
+                "score": 6,
+                "score100": 60,
+                "reason": "剧情表现一般，英雄背景故事较浅"
+              },
+              {
+                "id": "gameplay_presentation_art",
+                "name": "游戏性_表现力_美术表现",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9,
+                "score100": 90,
+                "reason": "美术表现优秀，角色皮肤精良"
+              },
+              {
+                "id": "gameplay_presentation_music",
+                "name": "游戏性_表现力_音乐表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8,
+                "score100": 80,
+                "reason": "音乐音效制作精良，氛围烘托到位"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_playability",
+            "name": "游戏性_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 8.8,
+            "score100": 88,
+            "children": [
+              {
+                "id": "gameplay_playability_operation_interaction",
+                "name": "游戏性_可玩性_操作交互",
+                "level": 3,
+                "weight": 0.2,
+                "score": 9,
+                "score100": 90,
+                "reason": "触屏操控流畅精准，交互反馈好"
+              },
+              {
+                "id": "gameplay_playability_gameplay_design",
+                "name": "游戏性_可玩性_玩法设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "玩法设计成熟，平衡性持续优化"
+              },
+              {
+                "id": "gameplay_playability_motivation",
+                "name": "游戏性_可玩性_游戏驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "竞技排名、皮肤收集、社交等多重驱动力强"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_depth",
+            "name": "游戏性_玩法深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 8.7,
+            "score100": 87,
+            "children": [
+              {
+                "id": "gameplay_depth_content_richness",
+                "name": "游戏性_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.45,
+                "score": 9,
+                "score100": 90,
+                "reason": "英雄、皮肤、玩法模式丰富"
+              },
+              {
+                "id": "gameplay_depth_level_design",
+                "name": "游戏性_玩法深度_关卡设计",
+                "level": 3,
+                "weight": 0.4,
+                "score": 8,
+                "score100": 80,
+                "reason": "地图设计合理，但创新有限"
+              },
+              {
+                "id": "gameplay_depth_social",
+                "name": "游戏性_玩法深度_玩家社交性",
+                "level": 3,
+                "weight": 0.15,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "社交系统完善，组队、公会、好友互动强"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_retention_development",
+            "name": "游戏性_留存养成",
+            "level": 2,
+            "weight": 0.15,
+            "score": 7.9,
+            "score100": 79,
+            "children": [
+              {
+                "id": "gameplay_retention_development_tutorial_clarity",
+                "name": "游戏性_留存养成_新手引导清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "新手引导较好，但后期深入教学不足"
+              },
+              {
+                "id": "gameplay_retention_development_growth_goal_clarity",
+                "name": "游戏性_留存养成_养成目标清晰度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "等级、熟练度、排位等目标清晰"
+              },
+              {
+                "id": "gameplay_retention_development_long_term_plan_clarity",
+                "name": "游戏性_留存养成_长线体验规划清晰度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 8,
+                "score100": 80,
+                "reason": "赛季制、战令等长线规划明确"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_revenue_ability",
+            "name": "游戏性_营收能力",
+            "level": 2,
+            "weight": 0.15,
+            "score": 8,
+            "score100": 80,
+            "children": [
+              {
+                "id": "gameplay_revenue_ability_payment_guidance_clarity",
+                "name": "游戏性_营收能力_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "付费引导自然，非强制但清晰"
+              },
+              {
+                "id": "gameplay_revenue_ability_payment_depth",
+                "name": "游戏性_营收能力_付费深度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "皮肤价格高，付费深度大"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "现象级MOBA手游，用户规模与营收能力顶尖，但创新度中等。",
+    "createdAt": "2026-04-29T09:22:53.473Z",
+    "model": "deepseek-v4-flash"
+  }
+]
