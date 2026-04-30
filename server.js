@@ -347,6 +347,44 @@ app.post("/api/review", async (req, res) => {
   }
 });
 
+app.delete("/api/review/:gameName", async (req, res) => {
+  try {
+    const gameName = String(req.params.gameName || "").trim();
+
+    if (!gameName) {
+      return res.status(400).json({
+        success: false,
+        message: "请指定要删除的游戏名称"
+      });
+    }
+
+    const reviews = await readReviews();
+    const normalized = normalizeGameName(gameName);
+    const filtered = reviews.filter(
+      (item) => normalizeGameName(item.gameName) !== normalized
+    );
+
+    if (filtered.length === reviews.length) {
+      return res.status(404).json({
+        success: false,
+        message: "未找到该游戏的评分记录"
+      });
+    }
+
+    await writeReviews(filtered);
+
+    res.json({
+      success: true,
+      message: `已删除《${gameName}》的评分记录`
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message || "删除评分失败"
+    });
+  }
+});
+
 app.get("/api/health", (req, res) => {
   res.json({
     success: true,

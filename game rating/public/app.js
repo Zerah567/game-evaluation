@@ -230,27 +230,71 @@ async function loadHistory() {
     historyList.innerHTML = items
       .map((item, index) => {
         return `
-          <button class="history-item" data-index="${index}" type="button">
-            <div class="history-name">${escapeHtml(item.gameName)}</div>
-            <div class="history-meta">
-              ${escapeHtml(item.finalScore)} / 100 · ${escapeHtml(
+          <div class="history-item" data-index="${index}">
+            <button class="history-item-main" type="button">
+              <div class="history-name">${escapeHtml(item.gameName)}</div>
+              <div class="history-meta">
+                ${escapeHtml(item.finalScore)} / 100 · ${escapeHtml(
           formatDate(item.createdAt)
         )}
-            </div>
-          </button>
+              </div>
+            </button>
+            <button class="delete-btn" data-index="${index}" type="button" title="删除">✕</button>
+          </div>
         `;
       })
       .join("");
 
-    document.querySelectorAll(".history-item").forEach((btn) => {
+    document.querySelectorAll(".history-item-main").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const index = Number(btn.dataset.index);
+        const index = Number(btn.parentElement.dataset.index);
         const item = items[index];
 
         if (item) {
           gameNameInput.value = item.gameName;
           renderReport(item, true);
           statusText.textContent = "已加载本地历史评分。";
+        }
+      });
+    });
+
+    document.querySelectorAll(".delete-btn").forEach((btn) => {
+      btn.addEventListener("click", async (event) => {
+        event.stopPropagation();
+        const index = Number(btn.dataset.index);
+        const item = items[index];
+
+        if (!item) return;
+
+        if (!confirm(`确定要删除《${item.gameName}》的评分记录吗？`)) return;
+
+        try {
+          const response = await fetch(`/api/review/${encodeURIComponent(item.gameName)}`, {
+            method: "DELETE"
+          });
+          const result = await response.json();
+
+          if (!result.success) {
+            throw new Error(result.message);
+          }
+
+          if (currentGameName === item.gameName) {
+            resultSection.classList.add("empty");
+            resultSection.innerHTML = `
+              <div class="empty-state">
+                <div class="empty-icon">🎮</div>
+                <h2>等待生成评分</h2>
+                <p>生成结果会显示在这里。</p>
+              </div>
+            `;
+            currentGameName = "";
+            regenerateBtn.hidden = true;
+          }
+
+          statusText.textContent = result.message;
+          await loadHistory();
+        } catch (error) {
+          statusText.textContent = error.message || "删除失败";
         }
       });
     });

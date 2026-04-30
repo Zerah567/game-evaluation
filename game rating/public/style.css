@@ -350,15 +350,26 @@ button:disabled {
 }
 
 .history-item {
-  width: 100%;
-  text-align: left;
-  padding: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   border: 1px solid var(--border);
   background: #fff;
   border-radius: 16px;
+  overflow: hidden;
 }
 
-.history-item:hover {
+.history-item-main {
+  flex: 1;
+  text-align: left;
+  padding: 13px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.history-item-main:hover {
   background: #f8fafc;
 }
 
@@ -370,6 +381,27 @@ button:disabled {
 .history-meta {
   color: var(--muted);
   font-size: 13px;
+}
+
+.delete-btn {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #9ca3af;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.delete-btn:hover {
+  background: #fef2f2;
+  color: var(--red);
 }
 
 @media (max-width: 900px) {
