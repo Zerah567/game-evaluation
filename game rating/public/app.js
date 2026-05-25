@@ -6,6 +6,8 @@ const statusText = document.getElementById("statusText");
 const resultSection = document.getElementById("resultSection");
 const historyList = document.getElementById("historyList");
 const refreshHistoryBtn = document.getElementById("refreshHistoryBtn");
+const knowledgeList = document.getElementById("knowledgeList");
+const refreshKnowledgeBtn = document.getElementById("refreshKnowledgeBtn");
 
 let currentGameName = "";
 
@@ -320,4 +322,107 @@ regenerateBtn.addEventListener("click", () => {
 
 refreshHistoryBtn.addEventListener("click", loadHistory);
 
+async function loadKnowledge() {
+  knowledgeList.innerHTML = `<p class="history-meta">正在加载...</p>`;
+
+  try {
+    const response = await fetch("/api/knowledge");
+    const result = await response.json();
+
+    if (!result.success) {
+      throw new Error(result.message || "读取知识库失败");
+    }
+
+    const entries = Object.entries(result.data || {});
+
+    if (!entries.length) {
+      knowledgeList.innerHTML = `<p class="history-meta">暂无游戏知识，生成评分后自动积累。</p>`;
+      return;
+    }
+
+    knowledgeList.innerHTML = entries
+      .map(([key, value]) => {
+        const facts = (value.knownFacts || []).join("、");
+        return `
+          <div class="knowledge-item" data-key="${escapeHtml(key)}">
+            <button class="knowledge-item-main" type="button">
+              <div class="history-name">${escapeHtml(key)}</div>
+              <div class="history-meta">
+                ${escapeHtml(value.genre || "未知类型")}
+                ${facts ? `· ${escapeHtml(facts)}` : ""}
+              </div>
+            </button>
+            <button class="delete-btn knowledge-delete" data-key="${escapeHtml(key)}" type="button" title="删除知识">✕</button>
+          </div>
+        `;
+      })
+      .join("");
+
+    document.querySelectorAll(".knowledge-item-main").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const key = btn.parentElement.dataset.key;
+        const entry = result.data[key];
+        if (!entry) return;
+
+        const description = entry.description || "（暂无简介）";
+        const facts = (entry.knownFacts || []).map((f, i) => `${i + 1}. ${f}`).join("\n");
+        const newFacts = prompt(
+          `正在查看/编辑《${key}》的知识\n\n类型：${entry.genre || "未知"}\n简介：${description}\n\n已知事实：\n${facts || "（暂无）"}\n\n如需补充新事实，请用逗号分隔输入：`,
+          (entry.knownFacts || []).join("，")
+        );
+
+        if (newFacts === null) return;
+
+        const factList = newFacts.split(/[，,、]/).map((s) => s.trim()).filter(Boolean);
+
+        const saveResponse = await fetch("/api/knowledge", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            gameName: key,
+            genre: entry.genre,
+            description: entry.description,
+            knownFacts: factList
+          })
+        });
+
+        const saveResult = await saveResponse.json();
+        if (saveResult.success) {
+          statusText.textContent = saveResult.message;
+          await loadKnowledge();
+        } else {
+          statusText.textContent = saveResult.message || "保存失败";
+        }
+      });
+    });
+
+    document.querySelectorAll(".knowledge-delete").forEach((btn) => {
+      btn.addEventListener("click", async (event) => {
+        event.stopPropagation();
+        const key = btn.dataset.key;
+        if (!confirm(`确定要删除《${key}》的知识吗？`)) return;
+
+        const response = await fetch(`/api/knowledge/${encodeURIComponent(key)}`, {
+          method: "DELETE"
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          statusText.textContent = result.message;
+          await loadKnowledge();
+        } else {
+          statusText.textContent = result.message || "删除失败";
+        }
+      });
+    });
+  } catch (error) {
+    knowledgeList.innerHTML = `<p class="history-meta">${escapeHtml(
+      error.message || "读取知识库失败"
+    )}</p>`;
+  }
+}
+
+refreshKnowledgeBtn.addEventListener("click", loadKnowledge);
+
 loadHistory();
+loadKnowledge();

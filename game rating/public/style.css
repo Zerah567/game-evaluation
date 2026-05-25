@@ -404,6 +404,30 @@ button:disabled {
   color: var(--red);
 }
 
+.knowledge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e0e7ff;
+  background: #f8faff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.knowledge-item-main {
+  flex: 1;
+  text-align: left;
+  padding: 13px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.knowledge-item-main:hover {
+  background: #eef2ff;
+}
+
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr;

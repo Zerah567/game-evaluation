@@ -14,6 +14,7 @@ const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
 
 const DATA_DIR = path.join(__dirname, "data");
 const DB_FILE = path.join(DATA_DIR, "reviews.json");
+const KNOWLEDGE_FILE = path.join(DATA_DIR, "knowledge.json");
 
 app.use(express.json({ limit: "2mb" }));
 app.use(express.static(path.join(__dirname, "game rating", "public")));
@@ -26,6 +27,27 @@ async function ensureDatabase() {
   } catch {
     await fs.writeFile(DB_FILE, JSON.stringify([], null, 2), "utf-8");
   }
+
+  try {
+    await fs.access(KNOWLEDGE_FILE);
+  } catch {
+    await fs.writeFile(KNOWLEDGE_FILE, JSON.stringify({}, null, 2), "utf-8");
+  }
+}
+
+async function readKnowledge() {
+  await ensureDatabase();
+  try {
+    const content = await fs.readFile(KNOWLEDGE_FILE, "utf-8");
+    return JSON.parse(content);
+  } catch {
+    return {};
+  }
+}
+
+async function writeKnowledge(knowledge) {
+  await ensureDatabase();
+  await fs.writeFile(KNOWLEDGE_FILE, JSON.stringify(knowledge, null, 2), "utf-8");
 }
 
 async function readReviews() {
@@ -197,29 +219,52 @@ async function callAiForReview(gameName) {
 
   const leafIndicators = getLeafIndicators();
 
+  const knowledge = await readKnowledge();
+  const normalized = normalizeGameName(gameName);
+  const existingKnowledge = knowledge[normalized] || null;
+
+  const knowledgeContext = existingKnowledge
+    ? `\n我们已有的关于《${gameName}》的知识：\n${JSON.stringify(existingKnowledge, null, 2)}\n请基于这些已有知识，结合你的判断给出更准确的评分。\n`
+    : "";
+
   const systemPrompt = `
-你是一名专业游戏商业化与游戏设计评测专家。
-你需要根据用户输入的游戏名称，对该游戏进行评分。
+你是一名顶级的专业游戏商业化与游戏设计评测专家，拥有超过20年的游戏行业经验。
+你需要根据用户输入的游戏名称，对该游戏进行全面、深度的评分分析。
+
 评分范围是 1 到 10 分，可以使用一位小数。
 必须严格按照用户给出的叶子指标逐项评分。
 如果你无法确认某个信息，请基于公开常识和合理推断给出保守评分，不要编造具体数据。
+
+对于 shortComment（简短评语），请写一段 150-300 字的深度分析，涵盖以下方面：
+- 游戏的核心特色与创新点
+- 目标用户群体和市场定位
+- 与同类竞品相比的优劣势
+- 商业变现潜力和长线运营前景
+- 整体评价和推荐程度
+要求语言犀利、深刻、有洞察力，避免套话和空话。
+
 最终只返回 JSON，不要返回 Markdown，不要返回解释性前后缀。
 `;
 
   const userPrompt = `
-请评价游戏：《${gameName}》。
+请评价游戏：《${gameName}》。${knowledgeContext}
 
 评分体系说明：
 - 所有叶子指标分数范围：1 到 10。
 - 你只需要为每个叶子指标给出 score 和 reason。
 - 后端会根据权重自动计算二级、一级和综合评分。
-- 请给出一句简短评语 shortComment。
+- shortComment 要求 150-300 字深度分析评语。
 
 必须返回如下 JSON 结构：
 
 {
   "gameName": "${gameName}",
-  "shortComment": "一句中文简短评语",
+  "shortComment": "一段 150-300 字的深度中文评语",
+  "gameKnowledge": {
+    "genre": "游戏类型",
+    "description": "游戏简介（100字以内）",
+    "knownFacts": ["关键事实1", "关键事实2"]
+  },
   "leafScores": {
     "指标ID": {
       "score": 8.5,
@@ -271,7 +316,19 @@ ${leafIndicators
 
   const content = data?.choices?.[0]?.message?.content;
 
-  return extractJsonFromText(content);
+  const aiJson = extractJsonFromText(content);
+
+  if (aiJson.gameKnowledge) {
+    const allKnowledge = await readKnowledge();
+    const key = normalizeGameName(gameName);
+    allKnowledge[key] = {
+      ...aiJson.gameKnowledge,
+      updatedAt: new Date().toISOString()
+    };
+    await writeKnowledge(allKnowledge);
+  }
+
+  return aiJson;
 }
 
 app.get("/api/history", async (req, res) => {
@@ -381,6 +438,79 @@ app.delete("/api/review/:gameName", async (req, res) => {
     res.status(500).json({
       success: false,
       message: error.message || "删除评分失败"
+    });
+  }
+});
+
+app.get("/api/knowledge", async (req, res) => {
+  try {
+    const knowledge = await readKnowledge();
+    res.json({ success: true, data: knowledge });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message || "读取知识库失败"
+    });
+  }
+});
+
+app.post("/api/knowledge", async (req, res) => {
+  try {
+    const { gameName, genre, description, knownFacts } = req.body;
+
+    if (!gameName || !gameName.trim()) {
+      return res.status(400).json({
+        success: false,
+        message: "请输入游戏名称"
+      });
+    }
+
+    const allKnowledge = await readKnowledge();
+    const key = normalizeGameName(gameName);
+
+    allKnowledge[key] = {
+      genre: genre || "",
+      description: description || "",
+      knownFacts: knownFacts || [],
+      updatedAt: new Date().toISOString()
+    };
+
+    await writeKnowledge(allKnowledge);
+
+    res.json({
+      success: true,
+      message: `已保存《${gameName}》的知识`
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message || "保存知识失败"
+    });
+  }
+});
+
+app.delete("/api/knowledge/:gameName", async (req, res) => {
+  try {
+    const gameName = String(req.params.gameName || "").trim();
+    if (!gameName) {
+      return res.status(400).json({ success: false, message: "请指定游戏名称" });
+    }
+
+    const allKnowledge = await readKnowledge();
+    const key = normalizeGameName(gameName);
+
+    if (!allKnowledge[key]) {
+      return res.status(404).json({ success: false, message: "未找到该游戏的知识" });
+    }
+
+    delete allKnowledge[key];
+    await writeKnowledge(allKnowledge);
+
+    res.json({ success: true, message: `已删除《${gameName}》的知识` });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message || "删除知识失败"
     });
   }
 });

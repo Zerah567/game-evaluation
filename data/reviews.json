@@ -1,8 +1,8 @@
 [
   {
-    "gameName": "Arc Raiders",
-    "finalScore": 67.2,
-    "finalScore10": 6.72,
+    "gameName": "深海迷航",
+    "finalScore": 69,
+    "finalScore10": 6.9,
     "dimensions": [
       {
         "id": "game_positioning",
@@ -17,44 +17,44 @@
             "name": "游戏定位_创新度",
             "level": 2,
             "weight": 0.1,
-            "score": 7.2,
-            "score100": 72,
+            "score": 8.3,
+            "score100": 83,
             "children": [
               {
                 "id": "game_positioning_innovation_art",
                 "name": "游戏定位_创新度_美术创新",
                 "level": 3,
                 "weight": 0.3,
-                "score": 8,
-                "score100": 80,
-                "reason": "赛博朋克与科幻结合的美术风格独特，视觉辨识度高。"
+                "score": 9,
+                "score100": 90,
+                "reason": "低多边形风格与水下恐怖氛围结合，视觉独特"
               },
               {
                 "id": "game_positioning_innovation_business_model",
                 "name": "游戏定位_创新度_商业模式创新",
                 "level": 3,
                 "weight": 0.2,
-                "score": 6,
-                "score100": 60,
-                "reason": "免费+内购模式符合主流，但具体付费设计尚未充分验证。"
+                "score": 7,
+                "score100": 70,
+                "reason": "买断制无内购，独立游戏常见，但非F2P模式"
               },
               {
                 "id": "game_positioning_innovation_gameplay",
                 "name": "游戏定位_创新度_玩法创新",
                 "level": 3,
                 "weight": 0.3,
-                "score": 7.5,
-                "score100": 75,
-                "reason": "PvPvE撤离玩法在现有基础上有所融合，但并非开创性创新。"
+                "score": 8,
+                "score100": 80,
+                "reason": "生存建造与水下探索融合，题材新颖"
               },
               {
                 "id": "game_positioning_innovation_narrative_ip",
                 "name": "游戏定位_创新度_叙事IP创新",
                 "level": 3,
                 "weight": 0.2,
-                "score": 6.5,
-                "score100": 65,
-                "reason": "原创IP，世界观有潜力但尚未形成深度叙事。"
+                "score": 9,
+                "score100": 90,
+                "reason": "原创IP通过环境叙事，悬疑恐怖氛围出色"
               }
             ]
           },
@@ -73,7 +73,7 @@
                 "weight": 0.5,
                 "score": 7,
                 "score100": 70,
-                "reason": "撤离射击类市场已有《逃离塔科夫》验证，用户基础存在。"
+                "reason": "生存建造市场大，但水下细分领域中等"
               },
               {
                 "id": "game_positioning_category_competitor_gap",
@@ -82,7 +82,7 @@
                 "weight": 0.5,
                 "score": 6,
                 "score100": 60,
-                "reason": "与头部竞品相比，在深度和内容量上有差距，但更易上手。"
+                "reason": "相比MC等头部，用户量小，但品质接近"
               }
             ]
           },
@@ -91,44 +91,44 @@
             "name": "游戏定位_用户增长潜力",
             "level": 2,
             "weight": 0.6,
-            "score": 6.5,
-            "score100": 65,
+            "score": 6.4,
+            "score100": 64,
             "children": [
               {
                 "id": "game_positioning_user_growth_potential_paid_acquisition",
                 "name": "游戏定位_用户增长潜力_买量评估",
                 "level": 3,
                 "weight": 0.1,
-                "score": 6.5,
-                "score100": 65,
-                "reason": "免费游戏利于买量，但市场竞争激烈，获客成本可能较高。"
+                "score": 5,
+                "score100": 50,
+                "reason": "买断制买量效果一般，靠口碑传播"
               },
               {
                 "id": "game_positioning_user_growth_potential_topic",
                 "name": "游戏定位_用户增长潜力_话题性",
                 "level": 3,
                 "weight": 0.3,
-                "score": 6,
-                "score100": 60,
-                "reason": "测试阶段有一定讨论度，但未形成破圈话题。"
+                "score": 7,
+                "score100": 70,
+                "reason": "独特题材引发讨论，但未大规模破圈"
               },
               {
                 "id": "game_positioning_user_growth_potential_ip_bonus",
                 "name": "游戏定位_用户增长潜力_IP加成",
                 "level": 3,
                 "weight": 0.2,
-                "score": 5,
-                "score100": 50,
-                "reason": "新IP无粉丝基础，IP加成弱。"
+                "score": 4,
+                "score100": 40,
+                "reason": "原创IP，初期无加成"
               },
               {
                 "id": "game_positioning_user_growth_potential_user_scale",
                 "name": "游戏定位_用户增长潜力_用户规模",
                 "level": 3,
                 "weight": 0.1,
-                "score": 6.5,
-                "score100": 65,
-                "reason": "预计中等规模用户，可能吸引射击游戏爱好者。"
+                "score": 6,
+                "score100": 60,
+                "reason": "销量千万，独立游戏优秀但远不及大众爆款"
               },
               {
                 "id": "game_positioning_user_growth_potential_live_streaming_fit",
@@ -137,7 +137,7 @@
                 "weight": 0.3,
                 "score": 8,
                 "score100": 80,
-                "reason": "紧张刺激的撤离玩法适合直播，观赏性强。"
+                "reason": "探索和恐怖元素适合直播，戏剧性强"
               }
             ]
           }
@@ -148,25 +148,25 @@
         "name": "游戏性",
         "level": 1,
         "weight": 0.6,
-        "score": 6.8,
-        "score100": 68,
+        "score": 7.1,
+        "score100": 71,
         "children": [
           {
             "id": "gameplay_presentation",
             "name": "游戏性_表现力",
             "level": 2,
             "weight": 0.2,
-            "score": 7.6,
-            "score100": 76,
+            "score": 8.8,
+            "score100": 88,
             "children": [
               {
                 "id": "gameplay_presentation_story_theme",
                 "name": "游戏性_表现力_剧情题材表现",
                 "level": 3,
                 "weight": 0.3,
-                "score": 6.5,
-                "score100": 65,
-                "reason": "世界观通过环境叙事呈现，但剧情深度一般。"
+                "score": 9,
+                "score100": 90,
+                "reason": "碎片化叙事，氛围营造极佳"
               },
               {
                 "id": "gameplay_presentation_art",
@@ -175,16 +175,16 @@
                 "weight": 0.5,
                 "score": 8.5,
                 "score100": 85,
-                "reason": "画面精美，场景和角色设计出色。"
+                "reason": "低多边形风格独特，色彩丰富"
               },
               {
                 "id": "gameplay_presentation_music",
                 "name": "游戏性_表现力_音乐表现",
                 "level": 3,
                 "weight": 0.2,
-                "score": 7,
-                "score100": 70,
-                "reason": "音乐氛围感足，但缺乏记忆点。"
+                "score": 9,
+                "score100": 90,
+                "reason": "配乐与环境音效增强沉浸感"
               }
             ]
           },
@@ -193,8 +193,8 @@
             "name": "游戏性_可玩性",
             "level": 2,
             "weight": 0.25,
-            "score": 7.3,
-            "score100": 73,
+            "score": 8.2,
+            "score100": 82,
             "children": [
               {
                 "id": "gameplay_playability_operation_interaction",
@@ -203,25 +203,25 @@
                 "weight": 0.2,
                 "score": 7.5,
                 "score100": 75,
-                "reason": "操作流畅，交互反馈良好，符合射击游戏标准。"
+                "reason": "操作手感尚可，建造系统较繁琐"
               },
               {
                 "id": "gameplay_playability_gameplay_design",
                 "name": "游戏性_可玩性_玩法设计",
                 "level": 3,
                 "weight": 0.5,
-                "score": 7,
-                "score100": 70,
-                "reason": "核心玩法有创新，但仍有打磨空间。"
+                "score": 8,
+                "score100": 80,
+                "reason": "探索建造循环良好，后期稍重复"
               },
               {
                 "id": "gameplay_playability_motivation",
                 "name": "游戏性_可玩性_游戏驱动力",
                 "level": 3,
                 "weight": 0.3,
-                "score": 7.5,
-                "score100": 75,
-                "reason": "装备收集和成功撤离提供持续驱动力。"
+                "score": 9,
+                "score100": 90,
+                "reason": "好奇心和恐惧驱动探索，强大"
               }
             ]
           },
@@ -238,27 +238,27 @@
                 "name": "游戏性_玩法深度_内容丰富度",
                 "level": 3,
                 "weight": 0.45,
-                "score": 6,
-                "score100": 60,
-                "reason": "测试版内容有限，正式版预计扩充。"
+                "score": 7,
+                "score100": 70,
+                "reason": "主线较短，但探索内容丰富，有DLC补充"
               },
               {
                 "id": "gameplay_depth_level_design",
                 "name": "游戏性_玩法深度_关卡设计",
                 "level": 3,
                 "weight": 0.4,
-                "score": 7.5,
-                "score100": 75,
-                "reason": "关卡设计有探索性和策略性。"
+                "score": 8,
+                "score100": 80,
+                "reason": "开放世界层次分明，区域设计精妙"
               },
               {
                 "id": "gameplay_depth_social",
                 "name": "游戏性_玩法深度_玩家社交性",
                 "level": 3,
                 "weight": 0.15,
-                "score": 6.5,
-                "score100": 65,
-                "reason": "强调团队合作，但社交系统较简单。"
+                "score": 2,
+                "score100": 20,
+                "reason": "单机无社交元素"
               }
             ]
           },
@@ -275,27 +275,27 @@
                 "name": "游戏性_留存养成_新手引导清晰度",
                 "level": 3,
                 "weight": 0.3,
-                "score": 7,
-                "score100": 70,
-                "reason": "新手引导比较清晰，能快速上手。"
+                "score": 6,
+                "score100": 60,
+                "reason": "引导较少，初期容易迷茫"
               },
               {
                 "id": "gameplay_retention_development_growth_goal_clarity",
                 "name": "游戏性_留存养成_养成目标清晰度",
                 "level": 3,
                 "weight": 0.3,
-                "score": 6.5,
-                "score100": 65,
-                "reason": "养成目标包括装备和角色解锁，但长线方向不够明确。"
+                "score": 7,
+                "score100": 70,
+                "reason": "科技树和目标清晰"
               },
               {
                 "id": "gameplay_retention_development_long_term_plan_clarity",
                 "name": "游戏性_留存养成_长线体验规划清晰度",
                 "level": 3,
                 "weight": 0.4,
-                "score": 5.5,
-                "score100": 55,
-                "reason": "长线内容规划尚未完全公开，存在不确定性。"
+                "score": 6,
+                "score100": 60,
+                "reason": "主线后内容有限，依赖DLC"
               }
             ]
           },
@@ -304,34 +304,34 @@
             "name": "游戏性_营收能力",
             "level": 2,
             "weight": 0.15,
-            "score": 5.3,
-            "score100": 53,
+            "score": 4.5,
+            "score100": 45,
             "children": [
               {
                 "id": "gameplay_revenue_ability_payment_guidance_clarity",
                 "name": "游戏性_营收能力_付费引导清晰度",
                 "level": 3,
                 "weight": 0.5,
-                "score": 5,
-                "score100": 50,
-                "reason": "付费引导不够清晰，测试阶段付费点较少。"
+                "score": 6,
+                "score100": 60,
+                "reason": "买断制无内购引导，购买流程清晰"
               },
               {
                 "id": "gameplay_revenue_ability_payment_depth",
                 "name": "游戏性_营收能力_付费深度",
                 "level": 3,
                 "weight": 0.5,
-                "score": 5.5,
-                "score100": 55,
-                "reason": "主要是皮肤和通行证，付费深度一般。"
+                "score": 3,
+                "score100": 30,
+                "reason": "单次付费，无持续付费点"
               }
             ]
           }
         ]
       }
     ],
-    "shortComment": "一款美术出色、玩法有创新的PvPvE撤离射击游戏，但作为新IP市场潜力待验证。",
-    "createdAt": "2026-04-30T02:01:37.773Z",
+    "shortComment": "《深海迷航》是一款以水下探索为核心的开放世界生存制作游戏，以其独特的深海恐怖氛围和精心设计的生态系统脱颖而出。游戏通过环境叙事和碎片化剧情，营造出强烈的未知恐惧与探索欲，美术风格低多边形却色彩绚丽，音乐与音效极大增强了沉浸感。目标用户为生存游戏爱好者和追求沉浸体验的硬核玩家，而非大众休闲用户。相比《我的世界》等头部竞品，它更强调叙事和场景独特性，但内容深度和mod生态不及。商业上采用买断制，无内购，变现能力有限，但凭借口碑在全球销量突破千万，长线通过DLC维持。整体而言，这是一款体验至上的佳作，探索驱动力极强，但后期重复性和社交缺失是短板。推荐给喜欢探索、生存与恐怖元素的玩家。",
+    "createdAt": "2026-05-25T06:31:42.775Z",
     "model": "deepseek-v4-flash"
   }
 ]
