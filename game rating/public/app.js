@@ -8,6 +8,7 @@ const historyList = document.getElementById("historyList");
 const refreshHistoryBtn = document.getElementById("refreshHistoryBtn");
 const knowledgeList = document.getElementById("knowledgeList");
 const refreshKnowledgeBtn = document.getElementById("refreshKnowledgeBtn");
+const exportBtn = document.getElementById("exportBtn");
 
 let currentGameName = "";
 
@@ -423,6 +424,29 @@ async function loadKnowledge() {
 }
 
 refreshKnowledgeBtn.addEventListener("click", loadKnowledge);
+
+async function exportData() {
+  try {
+    const response = await fetch("/api/export");
+    if (!response.ok) throw new Error("导出失败");
+
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `game-rating-export-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    statusText.textContent = "数据已导出。";
+  } catch (error) {
+    statusText.textContent = error.message || "导出数据失败";
+  }
+}
+
+exportBtn.addEventListener("click", exportData);
 
 loadHistory();
 loadKnowledge();

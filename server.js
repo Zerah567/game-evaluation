@@ -16,6 +16,8 @@ const DATA_DIR = path.join(__dirname, "data");
 const DB_FILE = path.join(DATA_DIR, "reviews.json");
 const KNOWLEDGE_FILE = path.join(DATA_DIR, "knowledge.json");
 
+const MAX_REVIEWS = 200;
+
 app.use(express.json({ limit: "2mb" }));
 app.use(express.static(path.join(__dirname, "game rating", "public")));
 
@@ -62,7 +64,8 @@ async function readReviews() {
 
 async function writeReviews(reviews) {
   await ensureDatabase();
-  await fs.writeFile(DB_FILE, JSON.stringify(reviews, null, 2), "utf-8");
+  const trimmed = reviews.slice(-MAX_REVIEWS);
+  await fs.writeFile(DB_FILE, JSON.stringify(trimmed, null, 2), "utf-8");
 }
 
 function normalizeGameName(name) {
@@ -517,6 +520,30 @@ app.delete("/api/knowledge/:gameName", async (req, res) => {
     res.status(500).json({
       success: false,
       message: error.message || "删除知识失败"
+    });
+  }
+});
+
+app.get("/api/export", async (req, res) => {
+  try {
+    const reviews = await readReviews();
+    const knowledge = await readKnowledge();
+
+    const exportData = {
+      exportedAt: new Date().toISOString(),
+      totalReviews: reviews.length,
+      totalKnowledge: Object.keys(knowledge).length,
+      reviews,
+      knowledge
+    };
+
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Content-Disposition", `attachment; filename="game-rating-export-${new Date().toISOString().slice(0, 10)}.json"`);
+    res.json(exportData);
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message || "导出数据失败"
     });
   }
 });
