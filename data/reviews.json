@@ -1,24 +1,24 @@
 [
   {
     "gameName": "深海迷航",
-    "finalScore": 69,
-    "finalScore10": 6.9,
+    "finalScore": 77,
+    "finalScore10": 7.7,
     "dimensions": [
       {
         "id": "game_positioning",
         "name": "游戏定位",
         "level": 1,
         "weight": 0.4,
-        "score": 6.6,
-        "score100": 66,
+        "score": 7.7,
+        "score100": 77,
         "children": [
           {
             "id": "game_positioning_innovation",
             "name": "游戏定位_创新度",
             "level": 2,
             "weight": 0.1,
-            "score": 8.3,
-            "score100": 83,
+            "score": 7.8,
+            "score100": 78,
             "children": [
               {
                 "id": "game_positioning_innovation_art",
@@ -27,34 +27,34 @@
                 "weight": 0.3,
                 "score": 9,
                 "score100": 90,
-                "reason": "低多边形风格与水下恐怖氛围结合，视觉独特"
+                "reason": "水下外星海洋美术风格独特且视觉震撼，具有极高辨识度。"
               },
               {
                 "id": "game_positioning_innovation_business_model",
                 "name": "游戏定位_创新度_商业模式创新",
                 "level": 3,
                 "weight": 0.2,
-                "score": 7,
-                "score100": 70,
-                "reason": "买断制无内购，独立游戏常见，但非F2P模式"
+                "score": 5,
+                "score100": 50,
+                "reason": "买断制+DLC的传统商业模式，缺乏创新。"
               },
               {
                 "id": "game_positioning_innovation_gameplay",
                 "name": "游戏定位_创新度_玩法创新",
                 "level": 3,
                 "weight": 0.3,
-                "score": 8,
-                "score100": 80,
-                "reason": "生存建造与水下探索融合，题材新颖"
+                "score": 8.5,
+                "score100": 85,
+                "reason": "融合生存、建造、恐怖探索于水下开放世界，玩法组合新颖。"
               },
               {
                 "id": "game_positioning_innovation_narrative_ip",
                 "name": "游戏定位_创新度_叙事IP创新",
                 "level": 3,
                 "weight": 0.2,
-                "score": 9,
-                "score100": 90,
-                "reason": "原创IP通过环境叙事，悬疑恐怖氛围出色"
+                "score": 7.5,
+                "score100": 75,
+                "reason": "碎片化环境叙事和日志解锁剧情，叙事手法有一定创新。"
               }
             ]
           },
@@ -63,8 +63,8 @@
             "name": "游戏定位_品类情况",
             "level": 2,
             "weight": 0.3,
-            "score": 6.5,
-            "score100": 65,
+            "score": 7.5,
+            "score100": 75,
             "children": [
               {
                 "id": "game_positioning_category_market_size",
@@ -73,16 +73,16 @@
                 "weight": 0.5,
                 "score": 7,
                 "score100": 70,
-                "reason": "生存建造市场大，但水下细分领域中等"
+                "reason": "生存建造类市场规模大，但水下细分品类相对小众。"
               },
               {
                 "id": "game_positioning_category_competitor_gap",
                 "name": "游戏定位_品类情况_与头部竞品差距",
                 "level": 3,
                 "weight": 0.5,
-                "score": 6,
-                "score100": 60,
-                "reason": "相比MC等头部，用户量小，但品质接近"
+                "score": 8,
+                "score100": 80,
+                "reason": "作为水下生存品类标杆，与《森林》等头部竞品相比基本无差距。"
               }
             ]
           },
@@ -91,17 +91,17 @@
             "name": "游戏定位_用户增长潜力",
             "level": 2,
             "weight": 0.6,
-            "score": 6.4,
-            "score100": 64,
+            "score": 7.7,
+            "score100": 77,
             "children": [
               {
                 "id": "game_positioning_user_growth_potential_paid_acquisition",
                 "name": "游戏定位_用户增长潜力_买量评估",
                 "level": 3,
                 "weight": 0.1,
-                "score": 5,
-                "score100": 50,
-                "reason": "买断制买量效果一般，靠口碑传播"
+                "score": 6.5,
+                "score100": 65,
+                "reason": "买断制游戏买量成本高，但高口碑降低了获客难度。"
               },
               {
                 "id": "game_positioning_user_growth_potential_topic",
@@ -110,34 +110,34 @@
                 "weight": 0.3,
                 "score": 7,
                 "score100": 70,
-                "reason": "独特题材引发讨论，但未大规模破圈"
+                "reason": "深海恐惧等话题有一定讨论度，但长期热度有限。"
               },
               {
                 "id": "game_positioning_user_growth_potential_ip_bonus",
                 "name": "游戏定位_用户增长潜力_IP加成",
                 "level": 3,
                 "weight": 0.2,
-                "score": 4,
-                "score100": 40,
-                "reason": "原创IP，初期无加成"
+                "score": 7.5,
+                "score100": 75,
+                "reason": "已成为知名IP，续作推动品牌效应。"
               },
               {
                 "id": "game_positioning_user_growth_potential_user_scale",
                 "name": "游戏定位_用户增长潜力_用户规模",
                 "level": 3,
                 "weight": 0.1,
-                "score": 6,
-                "score100": 60,
-                "reason": "销量千万，独立游戏优秀但远不及大众爆款"
+                "score": 7,
+                "score100": 70,
+                "reason": "千万销量用户基础扎实，但增长空间已趋平缓。"
               },
               {
                 "id": "game_positioning_user_growth_potential_live_streaming_fit",
                 "name": "游戏定位_用户增长潜力_直播契合度",
                 "level": 3,
                 "weight": 0.3,
-                "score": 8,
-                "score100": 80,
-                "reason": "探索和恐怖元素适合直播，戏剧性强"
+                "score": 9,
+                "score100": 90,
+                "reason": "探索与恐怖元素极具直播效果，观赏性极高。"
               }
             ]
           }
@@ -148,43 +148,43 @@
         "name": "游戏性",
         "level": 1,
         "weight": 0.6,
-        "score": 7.1,
-        "score100": 71,
+        "score": 7.7,
+        "score100": 77,
         "children": [
           {
             "id": "gameplay_presentation",
             "name": "游戏性_表现力",
             "level": 2,
             "weight": 0.2,
-            "score": 8.8,
-            "score100": 88,
+            "score": 8.5,
+            "score100": 85,
             "children": [
               {
                 "id": "gameplay_presentation_story_theme",
                 "name": "游戏性_表现力_剧情题材表现",
                 "level": 3,
                 "weight": 0.3,
-                "score": 9,
-                "score100": 90,
-                "reason": "碎片化叙事，氛围营造极佳"
+                "score": 8,
+                "score100": 80,
+                "reason": "探秘外星失落文明的剧情引人入胜，代入感强。"
               },
               {
                 "id": "gameplay_presentation_art",
                 "name": "游戏性_表现力_美术表现",
                 "level": 3,
                 "weight": 0.5,
-                "score": 8.5,
-                "score100": 85,
-                "reason": "低多边形风格独特，色彩丰富"
+                "score": 9,
+                "score100": 90,
+                "reason": "水下生态与生物设计精美绝伦，氛围营造顶级。"
               },
               {
                 "id": "gameplay_presentation_music",
                 "name": "游戏性_表现力_音乐表现",
                 "level": 3,
                 "weight": 0.2,
-                "score": 9,
-                "score100": 90,
-                "reason": "配乐与环境音效增强沉浸感"
+                "score": 8,
+                "score100": 80,
+                "reason": "动态音效与配乐强化恐怖和探索感，符合主题。"
               }
             ]
           },
@@ -193,35 +193,35 @@
             "name": "游戏性_可玩性",
             "level": 2,
             "weight": 0.25,
-            "score": 8.2,
-            "score100": 82,
+            "score": 8.5,
+            "score100": 85,
             "children": [
               {
                 "id": "gameplay_playability_operation_interaction",
                 "name": "游戏性_可玩性_操作交互",
                 "level": 3,
                 "weight": 0.2,
-                "score": 7.5,
-                "score100": 75,
-                "reason": "操作手感尚可，建造系统较繁琐"
+                "score": 7,
+                "score100": 70,
+                "reason": "PC操作流畅，但主机版本存在优化问题。"
               },
               {
                 "id": "gameplay_playability_gameplay_design",
                 "name": "游戏性_可玩性_玩法设计",
                 "level": 3,
                 "weight": 0.5,
-                "score": 8,
-                "score100": 80,
-                "reason": "探索建造循环良好，后期稍重复"
+                "score": 9,
+                "score100": 90,
+                "reason": "生存、建造、探索循环设计精良，自由度极高。"
               },
               {
                 "id": "gameplay_playability_motivation",
                 "name": "游戏性_可玩性_游戏驱动力",
                 "level": 3,
                 "weight": 0.3,
-                "score": 9,
-                "score100": 90,
-                "reason": "好奇心和恐惧驱动探索，强大"
+                "score": 8.5,
+                "score100": 85,
+                "reason": "好奇心和恐惧感双重驱动，促使玩家不断探索。"
               }
             ]
           },
@@ -230,35 +230,35 @@
             "name": "游戏性_玩法深度",
             "level": 2,
             "weight": 0.25,
-            "score": 6.7,
-            "score100": 67,
+            "score": 7.2,
+            "score100": 72,
             "children": [
               {
                 "id": "gameplay_depth_content_richness",
                 "name": "游戏性_玩法深度_内容丰富度",
                 "level": 3,
                 "weight": 0.45,
-                "score": 7,
-                "score100": 70,
-                "reason": "主线较短，但探索内容丰富，有DLC补充"
+                "score": 8,
+                "score100": 80,
+                "reason": "地图广阔，生物种类丰富，基地建造富有深度。"
               },
               {
                 "id": "gameplay_depth_level_design",
                 "name": "游戏性_玩法深度_关卡设计",
                 "level": 3,
                 "weight": 0.4,
-                "score": 8,
-                "score100": 80,
-                "reason": "开放世界层次分明，区域设计精妙"
+                "score": 7.5,
+                "score100": 75,
+                "reason": "开放世界各区设计有层次感，但无传统关卡。"
               },
               {
                 "id": "gameplay_depth_social",
                 "name": "游戏性_玩法深度_玩家社交性",
                 "level": 3,
                 "weight": 0.15,
-                "score": 2,
-                "score100": 20,
-                "reason": "单机无社交元素"
+                "score": 4,
+                "score100": 40,
+                "reason": "纯单机无社交系统，仅有社区分享。"
               }
             ]
           },
@@ -267,8 +267,8 @@
             "name": "游戏性_留存养成",
             "level": 2,
             "weight": 0.15,
-            "score": 6.3,
-            "score100": 63,
+            "score": 7,
+            "score100": 70,
             "children": [
               {
                 "id": "gameplay_retention_development_tutorial_clarity",
@@ -277,25 +277,25 @@
                 "weight": 0.3,
                 "score": 6,
                 "score100": 60,
-                "reason": "引导较少，初期容易迷茫"
+                "reason": "新手引导较薄弱，依赖玩家自行摸索。"
               },
               {
                 "id": "gameplay_retention_development_growth_goal_clarity",
                 "name": "游戏性_留存养成_养成目标清晰度",
                 "level": 3,
                 "weight": 0.3,
-                "score": 7,
-                "score100": 70,
-                "reason": "科技树和目标清晰"
+                "score": 8,
+                "score100": 80,
+                "reason": "建造更先进基地和探索更深区域的目标清晰。"
               },
               {
                 "id": "gameplay_retention_development_long_term_plan_clarity",
                 "name": "游戏性_留存养成_长线体验规划清晰度",
                 "level": 3,
                 "weight": 0.4,
-                "score": 6,
-                "score100": 60,
-                "reason": "主线后内容有限，依赖DLC"
+                "score": 7,
+                "score100": 70,
+                "reason": "主线线性但探索收集可延长游戏时间，整体规划明确。"
               }
             ]
           },
@@ -304,34 +304,642 @@
             "name": "游戏性_营收能力",
             "level": 2,
             "weight": 0.15,
-            "score": 4.5,
-            "score100": 45,
+            "score": 7,
+            "score100": 70,
             "children": [
               {
                 "id": "gameplay_revenue_ability_payment_guidance_clarity",
                 "name": "游戏性_营收能力_付费引导清晰度",
                 "level": 3,
                 "weight": 0.5,
-                "score": 6,
-                "score100": 60,
-                "reason": "买断制无内购引导，购买流程清晰"
+                "score": 9,
+                "score100": 90,
+                "reason": "买断制无内购，付费点只有游戏购买，引导清晰无混淆。"
               },
               {
                 "id": "gameplay_revenue_ability_payment_depth",
                 "name": "游戏性_营收能力_付费深度",
                 "level": 3,
                 "weight": 0.5,
-                "score": 3,
-                "score100": 30,
-                "reason": "单次付费，无持续付费点"
+                "score": 5,
+                "score100": 50,
+                "reason": "仅有一次性购买，无内购和持续付费深度。"
               }
             ]
           }
         ]
       }
     ],
-    "shortComment": "《深海迷航》是一款以水下探索为核心的开放世界生存制作游戏，以其独特的深海恐怖氛围和精心设计的生态系统脱颖而出。游戏通过环境叙事和碎片化剧情，营造出强烈的未知恐惧与探索欲，美术风格低多边形却色彩绚丽，音乐与音效极大增强了沉浸感。目标用户为生存游戏爱好者和追求沉浸体验的硬核玩家，而非大众休闲用户。相比《我的世界》等头部竞品，它更强调叙事和场景独特性，但内容深度和mod生态不及。商业上采用买断制，无内购，变现能力有限，但凭借口碑在全球销量突破千万，长线通过DLC维持。整体而言，这是一款体验至上的佳作，探索驱动力极强，但后期重复性和社交缺失是短板。推荐给喜欢探索、生存与恐怖元素的玩家。",
-    "createdAt": "2026-05-25T06:31:42.775Z",
+    "shortComment": "《深海迷航》将生存建造与深海恐怖探索完美融合，以外星球海洋为舞台，创造了独一无二的沉浸式体验。其美术表现力惊人，从发光水母到深渊巨兽，视觉冲击力极强；玩法上鼓励玩家通过探索解锁科技、建造基地，节奏自由且充满未知恐惧。游戏通过日志和环境叙事，逐步揭开星球背后的神秘故事，叙事手法巧妙。相比同类竞品如《森林》或《我的世界》，《深海迷航》以水下主题差异化竞争，成功开辟小众市场，全球销量超千万并衍生续作。商业上采用买断制加DLC模式，虽无内购深度，但凭借口碑和IP积累，长线运营通过续作和社区内容维持热度。直播观赏性极佳，恐惧与发现的反差极易制造节目效果。整体而言，这是一款在创新性、沉浸感和完成度上都达到顶尖水准的单机佳作，强烈推荐给喜爱探索和生存的玩家。",
+    "createdAt": "2026-05-25T07:09:14.188Z",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "gameName": "深海迷航2：异星水域",
+    "finalScore": 80.7,
+    "finalScore10": 8.07,
+    "dimensions": [
+      {
+        "id": "product_quality",
+        "name": "产品品质",
+        "level": 1,
+        "weight": 0.35,
+        "score": 8.4,
+        "score100": 84,
+        "children": [
+          {
+            "id": "product_quality_art",
+            "name": "产品品质_美术表现",
+            "level": 2,
+            "weight": 0.35,
+            "score": 8.9,
+            "score100": 89,
+            "children": [
+              {
+                "id": "product_quality_art_style",
+                "name": "产品品质_美术表现_美术风格与视觉效果",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9,
+                "score100": 90,
+                "reason": "延续系列美术风格，异星水域色彩丰富且细节惊艳，环境差异明显。"
+              },
+              {
+                "id": "product_quality_art_ui",
+                "name": "产品品质_美术表现_UI/UX设计",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "UI简洁直观，营造沉浸感，但部分菜单层级略深。"
+              },
+              {
+                "id": "product_quality_art_tech",
+                "name": "产品品质_美术表现_技术力表现",
+                "level": 3,
+                "weight": 0.2,
+                "score": 9,
+                "score100": 90,
+                "reason": "光影、水体效果与生物模型技术力顶级，性能优化有待观察。"
+              }
+            ]
+          },
+          {
+            "id": "product_quality_audio",
+            "name": "产品品质_音乐音效",
+            "level": 2,
+            "weight": 0.15,
+            "score": 9.2,
+            "score100": 92,
+            "children": [
+              {
+                "id": "product_quality_audio_music",
+                "name": "产品品质_音乐音效_配乐与音效设计",
+                "level": 3,
+                "weight": 0.6,
+                "score": 9,
+                "score100": 90,
+                "reason": "配乐出色，环境音效真实，生物叫声强化沉浸。"
+              },
+              {
+                "id": "product_quality_audio_atmosphere",
+                "name": "产品品质_音乐音效_语音与氛围营造",
+                "level": 3,
+                "weight": 0.4,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "氛围营造极佳，深海压迫感与异星神秘感并存。"
+              }
+            ]
+          },
+          {
+            "id": "product_quality_controls",
+            "name": "产品品质_操作交互",
+            "level": 2,
+            "weight": 0.2,
+            "score": 7.9,
+            "score100": 79,
+            "children": [
+              {
+                "id": "product_quality_controls_feel",
+                "name": "产品品质_操作交互_操作手感与流畅度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "操作手感流畅，水下移动物理感真实，但复杂地形偶有卡顿。"
+              },
+              {
+                "id": "product_quality_controls_feedback",
+                "name": "产品品质_操作交互_交互反馈与响应",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "交互反馈及时，但部分工具使用提示不够直观。"
+              },
+              {
+                "id": "product_quality_controls_platform",
+                "name": "产品品质_操作交互_多平台适配",
+                "level": 3,
+                "weight": 0.2,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "PC表现最佳，主机版帧数稳定性待提升，NS版尚未公布。"
+              }
+            ]
+          },
+          {
+            "id": "product_quality_story",
+            "name": "产品品质_剧情题材",
+            "level": 2,
+            "weight": 0.3,
+            "score": 7.7,
+            "score100": 77,
+            "children": [
+              {
+                "id": "product_quality_story_depth",
+                "name": "产品品质_剧情题材_剧情深度与叙事",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "剧情围绕星球秘密展开，叙事碎片化但深度足够。"
+              },
+              {
+                "id": "product_quality_story_world",
+                "name": "产品品质_剧情题材_世界观构建",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "异星水域世界观独特且自洽，生态环境丰富。"
+              },
+              {
+                "id": "product_quality_story_character",
+                "name": "产品品质_剧情题材_角色塑造",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "角色塑造较弱，主角沉默，NPC存在感低。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gameplay_design",
+        "name": "玩法设计",
+        "level": 1,
+        "weight": 0.35,
+        "score": 7.9,
+        "score100": 79,
+        "children": [
+          {
+            "id": "gameplay_design_innovation",
+            "name": "玩法设计_玩法创新",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7.2,
+            "score100": 72,
+            "children": [
+              {
+                "id": "gameplay_design_innovation_core",
+                "name": "玩法设计_玩法创新_核心玩法创新度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "核心玩法继承前作，未突破生存建造框架。"
+              },
+              {
+                "id": "gameplay_design_innovation_fusion",
+                "name": "玩法设计_玩法创新_机制融合新颖度",
+                "level": 3,
+                "weight": 0.3,
+                "score": 7,
+                "score100": 70,
+                "reason": "机制融合稳健，但无令人眼前一亮的新组合。"
+              },
+              {
+                "id": "gameplay_design_innovation_differentiation",
+                "name": "玩法设计_玩法创新_与同类竞品差异度",
+                "level": 3,
+                "weight": 0.2,
+                "score": 8,
+                "score100": 80,
+                "reason": "水下探索题材仍具独特性，同类竞品稀少。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_design_depth",
+            "name": "玩法设计_玩法深度",
+            "level": 2,
+            "weight": 0.3,
+            "score": 8.5,
+            "score100": 85,
+            "children": [
+              {
+                "id": "gameplay_design_depth_content",
+                "name": "玩法设计_玩法深度_内容丰富度",
+                "level": 3,
+                "weight": 0.4,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "内容丰富，生物种类多，区域划分清晰，可探索性强。"
+              },
+              {
+                "id": "gameplay_design_depth_level",
+                "name": "玩法设计_玩法深度_关卡与地图设计",
+                "level": 3,
+                "weight": 0.3,
+                "score": 9,
+                "score100": 90,
+                "reason": "地图设计精妙，垂直与水平维度俱佳，隐藏洞穴与遗迹充满惊喜。"
+              },
+              {
+                "id": "gameplay_design_depth_strategy",
+                "name": "玩法设计_玩法深度_策略与决策空间",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "资源管理与基地建造存在策略性，但深度一般。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_design_playability",
+            "name": "玩法设计_可玩性",
+            "level": 2,
+            "weight": 0.25,
+            "score": 8,
+            "score100": 80,
+            "children": [
+              {
+                "id": "gameplay_design_playability_fun",
+                "name": "玩法设计_可玩性_玩法趣味性",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "探索未知与直面深海恐惧的体验极具趣味。"
+              },
+              {
+                "id": "gameplay_design_playability_motivation",
+                "name": "玩法设计_可玩性_目标驱动力",
+                "level": 3,
+                "weight": 0.3,
+                "score": 8,
+                "score100": 80,
+                "reason": "主线目标与好奇驱动并重，但中期可能迷茫。"
+              },
+              {
+                "id": "gameplay_design_playability_replay",
+                "name": "玩法设计_可玩性_重复可玩性",
+                "level": 3,
+                "weight": 0.2,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "通关后缺乏强动力重玩，可考虑新游戏+或挑战模式。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_design_social",
+            "name": "玩法设计_社交性",
+            "level": 2,
+            "weight": 0.1,
+            "score": 7.8,
+            "score100": 78,
+            "children": [
+              {
+                "id": "gameplay_design_social_multiplayer",
+                "name": "玩法设计_社交性_多人社交功能",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "支持4人合作，分工探索提升乐趣，但社交互动有限。"
+              },
+              {
+                "id": "gameplay_design_social_community",
+                "name": "玩法设计_社交性_社区生态",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "社区活跃，但官方工具支持一般，Mod生态待观察。"
+              }
+            ]
+          },
+          {
+            "id": "gameplay_design_onboarding",
+            "name": "玩法设计_新手引导",
+            "level": 2,
+            "weight": 0.1,
+            "score": 7.5,
+            "score100": 75,
+            "children": [
+              {
+                "id": "gameplay_design_onboarding_clarity",
+                "name": "玩法设计_新手引导_新手引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "新手引导清晰，逐步解锁系统，但缺乏进阶教程。"
+              },
+              {
+                "id": "gameplay_design_onboarding_threshold",
+                "name": "玩法设计_新手引导_上手门槛",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "操作简单但生存压力与缺氧机制可能劝退休闲玩家。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "market_positioning",
+        "name": "市场定位",
+        "level": 1,
+        "weight": 0.2,
+        "score": 7.8,
+        "score100": 78,
+        "children": [
+          {
+            "id": "market_positioning_category",
+            "name": "市场定位_品类匹配度",
+            "level": 2,
+            "weight": 0.3,
+            "score": 7.3,
+            "score100": 73,
+            "children": [
+              {
+                "id": "market_positioning_category_size",
+                "name": "市场定位_品类匹配度_品类市场规模",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "生存建造类市场规模较大，但水下细分较小众。"
+              },
+              {
+                "id": "market_positioning_category_trend",
+                "name": "市场定位_品类匹配度_品类增长趋势",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "品类增长平缓，但优质内容仍能吸引玩家。"
+              }
+            ]
+          },
+          {
+            "id": "market_positioning_audience",
+            "name": "市场定位_目标受众",
+            "level": 2,
+            "weight": 0.2,
+            "score": 7.8,
+            "score100": 78,
+            "children": [
+              {
+                "id": "market_positioning_audience_clarity",
+                "name": "市场定位_目标受众_受众定位清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "精准定位生存探索爱好者与深海迷航粉丝。"
+              },
+              {
+                "id": "market_positioning_audience_scale",
+                "name": "市场定位_目标受众_受众规模与潜力",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "用户规模中等，难以破圈至大众。"
+              }
+            ]
+          },
+          {
+            "id": "market_positioning_competition",
+            "name": "市场定位_竞品差距",
+            "level": 2,
+            "weight": 0.25,
+            "score": 8.4,
+            "score100": 84,
+            "children": [
+              {
+                "id": "market_positioning_competition_gap",
+                "name": "市场定位_竞品差距_与头部竞品差距",
+                "level": 3,
+                "weight": 0.6,
+                "score": 8,
+                "score100": 80,
+                "reason": "与头部竞品如Minecraft相比沉浸感强但内容量有差距。"
+              },
+              {
+                "id": "market_positioning_competition_differentiation",
+                "name": "市场定位_竞品差距_差异化优势",
+                "level": 3,
+                "weight": 0.4,
+                "score": 9,
+                "score100": 90,
+                "reason": "水下生存+叙事驱动，差异化显著。"
+              }
+            ]
+          },
+          {
+            "id": "market_positioning_ip",
+            "name": "市场定位_IP品牌价值",
+            "level": 2,
+            "weight": 0.15,
+            "score": 8,
+            "score100": 80,
+            "children": [
+              {
+                "id": "market_positioning_ip_influence",
+                "name": "市场定位_IP品牌价值_IP影响力",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "IP口碑良好，前作销量可观，续作期待度高。"
+              },
+              {
+                "id": "market_positioning_ip_potential",
+                "name": "市场定位_IP品牌价值_品牌延伸潜力",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "IP有改编周边潜力，但题材限制主流破圈。"
+              }
+            ]
+          },
+          {
+            "id": "market_positioning_topic",
+            "name": "市场定位_话题性",
+            "level": 2,
+            "weight": 0.1,
+            "score": 7.8,
+            "score100": 78,
+            "children": [
+              {
+                "id": "market_positioning_topic_heat",
+                "name": "市场定位_话题性_话题度与讨论热度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "发布前后话题度高，但持续性依赖内容更新。"
+              },
+              {
+                "id": "market_positioning_topic_streaming",
+                "name": "市场定位_话题性_直播与视频传播潜力",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "直播效果极佳，恐惧与探索场景吸睛。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "commercial_potential",
+        "name": "商业潜力",
+        "level": 1,
+        "weight": 0.1,
+        "score": 8,
+        "score100": 80,
+        "children": [
+          {
+            "id": "commercial_potential_payment_model",
+            "name": "商业潜力_付费模式",
+            "level": 2,
+            "weight": 0.3,
+            "score": 9.3,
+            "score100": 93,
+            "children": [
+              {
+                "id": "commercial_potential_payment_model_reasonableness",
+                "name": "商业潜力_付费模式_付费模式合理性",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9,
+                "score100": 90,
+                "reason": "买断制+DLC模式合理，无内购陷阱。"
+              },
+              {
+                "id": "commercial_potential_payment_model_clarity",
+                "name": "商业潜力_付费模式_付费引导清晰度",
+                "level": 3,
+                "weight": 0.5,
+                "score": 9.5,
+                "score100": 95,
+                "reason": "付费内容明确，无隐藏消费。"
+              }
+            ]
+          },
+          {
+            "id": "commercial_potential_payment_depth",
+            "name": "商业潜力_付费深度",
+            "level": 2,
+            "weight": 0.25,
+            "score": 6.8,
+            "score100": 68,
+            "children": [
+              {
+                "id": "commercial_potential_payment_depth_design",
+                "name": "商业潜力_付费深度_付费点设计",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "DLC付费点较少，主要为扩展内容。"
+              },
+              {
+                "id": "commercial_potential_payment_depth_sustainability",
+                "name": "商业潜力_付费深度_付费深度与持续性",
+                "level": 3,
+                "weight": 0.5,
+                "score": 6.5,
+                "score100": 65,
+                "reason": "付费深度较低，长线收益依赖DLC销量。"
+              }
+            ]
+          },
+          {
+            "id": "commercial_potential_acquisition",
+            "name": "商业潜力_获客效率",
+            "level": 2,
+            "weight": 0.2,
+            "score": 8.3,
+            "score100": 83,
+            "children": [
+              {
+                "id": "commercial_potential_acquisition_cost",
+                "name": "商业潜力_获客效率_买量获客成本",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8,
+                "score100": 80,
+                "reason": "品牌效应降低买量成本，但后起之秀竞争。"
+              },
+              {
+                "id": "commercial_potential_acquisition_organic",
+                "name": "商业潜力_获客效率_自然获客能力",
+                "level": 3,
+                "weight": 0.5,
+                "score": 8.5,
+                "score100": 85,
+                "reason": "前作口碑与直播传播带来大量自然用户。"
+              }
+            ]
+          },
+          {
+            "id": "commercial_potential_long_term",
+            "name": "商业潜力_长线运营",
+            "level": 2,
+            "weight": 0.25,
+            "score": 7.3,
+            "score100": 73,
+            "children": [
+              {
+                "id": "commercial_potential_long_term_planning",
+                "name": "商业潜力_长线运营_长线运营规划",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7,
+                "score100": 70,
+                "reason": "官方提及持续更新，但具体规划未详。"
+              },
+              {
+                "id": "commercial_potential_long_term_updates",
+                "name": "商业潜力_长线运营_版本更新潜力",
+                "level": 3,
+                "weight": 0.5,
+                "score": 7.5,
+                "score100": 75,
+                "reason": "支持Mod与定期补丁，但内容节奏未知。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shortComment": "作为《深海迷航》系列的正统续作，《深海迷航2：异星水域》在核心玩法上延续了前作深海生存探索的独特体验，并引入了更丰富的外星生态与动态环境系统，进一步强化了沉浸感与未知探索的乐趣。画面表现力与音效设计依旧顶尖，水下世界的压迫感与壮丽感并存。然而，玩法创新相对保守，核心机制未跳脱出“采集-建造-深入”的循环，新加入的异星水域生物虽然惊艳但互动深度有限。目标用户明确为生存建造与探索类爱好者，与《星际拓荒》《深海迷航》粉丝重合度高，但较难破圈。商业变现上预计延续买断制+DLC模式，付费设计克制，长线运营依赖后续免费更新与内容包。整体而言，这是一款品质扎实但惊喜不足的续作，推荐给期待更多水下冒险的玩家，但创新期待值不宜过高。",
+    "createdAt": "2026-05-26T03:23:21.285Z",
     "model": "deepseek-v4-flash"
   }
 ]
