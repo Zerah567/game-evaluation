@@ -377,7 +377,7 @@ async function loadKnowledge() {
 
     if (!allKnowledgeEntries.length) {
       knowledgeList.innerHTML = `<p class="history-meta">暂无游戏知识，生成评分后自动积累。</p>`;
-      const knowledgeHeader = document.querySelector(".history-card h2:last-of-type");
+      const knowledgeHeader = document.getElementById("knowledgeTitle");
       if (knowledgeHeader) {
         knowledgeHeader.textContent = "游戏知识库";
       }
@@ -385,7 +385,7 @@ async function loadKnowledge() {
       return;
     }
 
-    const knowledgeHeader = document.querySelector(".history-card h2:last-of-type");
+    const knowledgeHeader = document.getElementById("knowledgeTitle");
     if (knowledgeHeader) {
       knowledgeHeader.textContent = `游戏知识库（${allKnowledgeEntries.length} 条）`;
     }
@@ -421,7 +421,7 @@ function renderKnowledge() {
     return;
   }
 
-  const knowledgeHeader = document.querySelector(".history-card h2:last-of-type");
+  const knowledgeHeader = document.getElementById("knowledgeTitle");
   if (knowledgeHeader) {
     const total = keyword ? `${visibleEntries.length}/${filtered.length}` : String(allKnowledgeEntries.length);
     knowledgeHeader.textContent = `游戏知识库${keyword ? `（搜索 ${total} 条）` : `（${total} 条）`}`;
