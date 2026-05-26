@@ -426,8 +426,16 @@ async function loadKnowledge() {
 refreshKnowledgeBtn.addEventListener("click", loadKnowledge);
 
 async function exportData() {
+  const password = prompt("请输入导出密码：");
+  if (password === null) return;
+
   try {
-    const response = await fetch("/api/export");
+    const response = await fetch(`/api/export?token=${encodeURIComponent(password)}`);
+
+    if (response.status === 403) {
+      throw new Error("密码错误，无权导出");
+    }
+
     if (!response.ok) throw new Error("导出失败");
 
     const blob = await response.blob();

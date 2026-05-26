@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL || "https://api.deepseek.com";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "deepseek-v4-flash";
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
+const EXPORT_TOKEN = process.env.EXPORT_TOKEN || "";
 
 const DATA_DIR = path.join(__dirname, "data");
 const DB_FILE = path.join(DATA_DIR, "reviews.json");
@@ -526,6 +527,15 @@ app.delete("/api/knowledge/:gameName", async (req, res) => {
 
 app.get("/api/export", async (req, res) => {
   try {
+    const token = String(req.query.token || "").trim();
+
+    if (EXPORT_TOKEN && token !== EXPORT_TOKEN) {
+      return res.status(403).json({
+        success: false,
+        message: "导出密码错误，无权操作"
+      });
+    }
+
     const reviews = await readReviews();
     const knowledge = await readKnowledge();
 
