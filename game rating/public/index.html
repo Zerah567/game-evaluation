@@ -57,7 +57,9 @@
               刷新
             </button>
           </div>
+          <input id="historySearch" class="search-input" type="text" placeholder="搜索历史记录..." />
           <div id="historyList" class="history-list"></div>
+          <button id="historyMoreBtn" class="more-btn" type="button" hidden>显示更多</button>
 
           <div class="history-header" style="margin-top:20px;">
             <h2>游戏知识库</h2>
@@ -65,10 +67,12 @@
               刷新
             </button>
           </div>
+          <input id="knowledgeSearch" class="search-input" type="text" placeholder="搜索知识库..." />
           <p class="status" style="font-size:13px;margin:6px 0 12px;color:var(--muted);">
             AI 每次评测后自动积累游戏知识，越用越准
           </p>
           <div id="knowledgeList" class="history-list"></div>
+          <button id="knowledgeMoreBtn" class="more-btn" type="button" hidden>显示更多</button>
 
           <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
             <button id="exportBtn" class="text-btn" type="button">

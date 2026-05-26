@@ -9,8 +9,18 @@ const refreshHistoryBtn = document.getElementById("refreshHistoryBtn");
 const knowledgeList = document.getElementById("knowledgeList");
 const refreshKnowledgeBtn = document.getElementById("refreshKnowledgeBtn");
 const exportBtn = document.getElementById("exportBtn");
+const historySearch = document.getElementById("historySearch");
+const knowledgeSearch = document.getElementById("knowledgeSearch");
+const historyMoreBtn = document.getElementById("historyMoreBtn");
+const knowledgeMoreBtn = document.getElementById("knowledgeMoreBtn");
+
+const PAGE_SIZE = 20;
 
 let currentGameName = "";
+let allHistoryItems = [];
+let allKnowledgeEntries = [];
+let historyDisplayCount = 0;
+let knowledgeDisplayCount = 0;
 
 function escapeHtml(str) {
   return String(str || "")
@@ -223,17 +233,48 @@ async function loadHistory() {
       throw new Error(result.message || "读取历史失败");
     }
 
-    const items = result.data || [];
+    allHistoryItems = result.data || [];
 
-    if (!items.length) {
+    if (!allHistoryItems.length) {
       historyList.innerHTML = `<p class="history-meta">暂无历史记录。</p>`;
+      historyMoreBtn.hidden = true;
       return;
     }
 
-    historyList.innerHTML = items
-      .map((item, index) => {
-        return `
-          <div class="history-item" data-index="${index}">
+    renderHistory();
+  } catch (error) {
+    historyList.innerHTML = `<p class="history-meta">${escapeHtml(
+      error.message || "读取历史失败"
+    )}</p>`;
+  }
+}
+
+function renderHistory() {
+  const keyword = (historySearch.value || "").trim().toLowerCase();
+  const filtered = keyword
+    ? allHistoryItems.filter((item) =>
+        (item.gameName || "").toLowerCase().includes(keyword)
+      )
+    : allHistoryItems;
+
+  if (historyDisplayCount === 0) {
+    historyDisplayCount = PAGE_SIZE;
+  }
+
+  const showCount = Math.min(historyDisplayCount, filtered.length);
+  const visibleItems = filtered.slice(0, showCount);
+
+  if (!filtered.length) {
+    historyList.innerHTML = `<p class="history-meta">未找到匹配的记录。</p>`;
+    historyMoreBtn.hidden = true;
+    return;
+  }
+
+  historyList.innerHTML = visibleItems
+    .map((item, index) => {
+      const originalIndex = allHistoryItems.indexOf(item);
+      return `
+          <div class="history-item" data-original-index="${originalIndex}">
             <button class="history-item-main" type="button">
               <div class="history-name">${escapeHtml(item.gameName)}</div>
               <div class="history-meta">
@@ -242,70 +283,68 @@ async function loadHistory() {
         )}
               </div>
             </button>
-            <button class="delete-btn" data-index="${index}" type="button" title="删除">✕</button>
+            <button class="delete-btn" data-original-index="${originalIndex}" type="button" title="删除">✕</button>
           </div>
         `;
-      })
-      .join("");
+    })
+    .join("");
 
-    document.querySelectorAll(".history-item-main").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const index = Number(btn.parentElement.dataset.index);
-        const item = items[index];
+  historyMoreBtn.hidden = showCount >= filtered.length;
 
-        if (item) {
-          gameNameInput.value = item.gameName;
-          renderReport(item, true);
-          statusText.textContent = "已加载本地历史评分。";
-        }
-      });
+  document.querySelectorAll(".history-item-main").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const originalIndex = Number(btn.parentElement.dataset.originalIndex);
+      const item = allHistoryItems[originalIndex];
+
+      if (item) {
+        gameNameInput.value = item.gameName;
+        renderReport(item, true);
+        statusText.textContent = "已加载本地历史评分。";
+      }
     });
+  });
 
-    document.querySelectorAll(".delete-btn").forEach((btn) => {
-      btn.addEventListener("click", async (event) => {
-        event.stopPropagation();
-        const index = Number(btn.dataset.index);
-        const item = items[index];
+  document.querySelectorAll(".history-item .delete-btn").forEach((btn) => {
+    btn.addEventListener("click", async (event) => {
+      event.stopPropagation();
+      const originalIndex = Number(btn.dataset.originalIndex);
+      const item = allHistoryItems[originalIndex];
 
-        if (!item) return;
+      if (!item) return;
 
-        if (!confirm(`确定要删除《${item.gameName}》的评分记录吗？`)) return;
+      if (!confirm(`确定要删除《${item.gameName}》的评分记录吗？`)) return;
 
-        try {
-          const response = await fetch(`/api/review/${encodeURIComponent(item.gameName)}`, {
-            method: "DELETE"
-          });
-          const result = await response.json();
+      try {
+        const response = await fetch(`/api/review/${encodeURIComponent(item.gameName)}`, {
+          method: "DELETE"
+        });
+        const delResult = await response.json();
 
-          if (!result.success) {
-            throw new Error(result.message);
-          }
+        if (!delResult.success) {
+          throw new Error(delResult.message);
+        }
 
-          if (currentGameName === item.gameName) {
-            resultSection.classList.add("empty");
-            resultSection.innerHTML = `
+        if (currentGameName === item.gameName) {
+          resultSection.classList.add("empty");
+          resultSection.innerHTML = `
               <div class="empty-state">
                 <div class="empty-icon">🎮</div>
                 <h2>等待生成评分</h2>
                 <p>生成结果会显示在这里。</p>
               </div>
             `;
-            currentGameName = "";
-            regenerateBtn.hidden = true;
-          }
-
-          statusText.textContent = result.message;
-          await loadHistory();
-        } catch (error) {
-          statusText.textContent = error.message || "删除失败";
+          currentGameName = "";
+          regenerateBtn.hidden = true;
         }
-      });
+
+        statusText.textContent = delResult.message;
+        historyDisplayCount = 0;
+        await loadHistory();
+      } catch (error) {
+        statusText.textContent = error.message || "删除失败";
+      }
     });
-  } catch (error) {
-    historyList.innerHTML = `<p class="history-meta">${escapeHtml(
-      error.message || "读取历史失败"
-    )}</p>`;
-  }
+  });
 }
 
 reviewForm.addEventListener("submit", (event) => {
@@ -334,17 +373,64 @@ async function loadKnowledge() {
       throw new Error(result.message || "读取知识库失败");
     }
 
-    const entries = Object.entries(result.data || {});
+    allKnowledgeEntries = Object.entries(result.data || {});
 
-    if (!entries.length) {
+    if (!allKnowledgeEntries.length) {
       knowledgeList.innerHTML = `<p class="history-meta">暂无游戏知识，生成评分后自动积累。</p>`;
+      const knowledgeHeader = document.querySelector(".history-card h2:last-of-type");
+      if (knowledgeHeader) {
+        knowledgeHeader.textContent = "游戏知识库";
+      }
+      knowledgeMoreBtn.hidden = true;
       return;
     }
 
-    knowledgeList.innerHTML = entries
-      .map(([key, value]) => {
-        const facts = (value.knownFacts || []).join("、");
-        return `
+    const knowledgeHeader = document.querySelector(".history-card h2:last-of-type");
+    if (knowledgeHeader) {
+      knowledgeHeader.textContent = `游戏知识库（${allKnowledgeEntries.length} 条）`;
+    }
+
+    renderKnowledge();
+  } catch (error) {
+    knowledgeList.innerHTML = `<p class="history-meta">${escapeHtml(
+      error.message || "读取知识库失败"
+    )}</p>`;
+  }
+}
+
+function renderKnowledge() {
+  const keyword = (knowledgeSearch.value || "").trim().toLowerCase();
+  const filtered = keyword
+    ? allKnowledgeEntries.filter(
+        ([key, value]) =>
+          key.toLowerCase().includes(keyword) ||
+          (value.genre || "").toLowerCase().includes(keyword)
+      )
+    : allKnowledgeEntries;
+
+  if (knowledgeDisplayCount === 0) {
+    knowledgeDisplayCount = PAGE_SIZE;
+  }
+
+  const showCount = Math.min(knowledgeDisplayCount, filtered.length);
+  const visibleEntries = filtered.slice(0, showCount);
+
+  if (!filtered.length) {
+    knowledgeList.innerHTML = `<p class="history-meta">未找到匹配的知识。</p>`;
+    knowledgeMoreBtn.hidden = true;
+    return;
+  }
+
+  const knowledgeHeader = document.querySelector(".history-card h2:last-of-type");
+  if (knowledgeHeader) {
+    const total = keyword ? `${visibleEntries.length}/${filtered.length}` : String(allKnowledgeEntries.length);
+    knowledgeHeader.textContent = `游戏知识库${keyword ? `（搜索 ${total} 条）` : `（${total} 条）`}`;
+  }
+
+  knowledgeList.innerHTML = visibleEntries
+    .map(([key, value]) => {
+      const facts = (value.knownFacts || []).join("、");
+      return `
           <div class="knowledge-item" data-key="${escapeHtml(key)}">
             <button class="knowledge-item-main" type="button">
               <div class="history-name">${escapeHtml(key)}</div>
@@ -356,71 +442,70 @@ async function loadKnowledge() {
             <button class="delete-btn knowledge-delete" data-key="${escapeHtml(key)}" type="button" title="删除知识">✕</button>
           </div>
         `;
-      })
-      .join("");
+    })
+    .join("");
 
-    document.querySelectorAll(".knowledge-item-main").forEach((btn) => {
-      btn.addEventListener("click", async () => {
-        const key = btn.parentElement.dataset.key;
-        const entry = result.data[key];
-        if (!entry) return;
+  knowledgeMoreBtn.hidden = showCount >= filtered.length;
 
-        const description = entry.description || "（暂无简介）";
-        const facts = (entry.knownFacts || []).map((f, i) => `${i + 1}. ${f}`).join("\n");
-        const newFacts = prompt(
-          `正在查看/编辑《${key}》的知识\n\n类型：${entry.genre || "未知"}\n简介：${description}\n\n已知事实：\n${facts || "（暂无）"}\n\n如需补充新事实，请用逗号分隔输入：`,
-          (entry.knownFacts || []).join("，")
-        );
+  document.querySelectorAll(".knowledge-item-main").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const key = btn.parentElement.dataset.key;
+      const entry = allKnowledgeEntries.find(([k]) => k === key)?.[1];
+      if (!entry) return;
 
-        if (newFacts === null) return;
+      const description = entry.description || "（暂无简介）";
+      const facts = (entry.knownFacts || []).map((f, i) => `${i + 1}. ${f}`).join("\n");
+      const newFacts = prompt(
+        `正在查看/编辑《${key}》的知识\n\n类型：${entry.genre || "未知"}\n简介：${description}\n\n已知事实：\n${facts || "（暂无）"}\n\n如需补充新事实，请用逗号分隔输入：`,
+        (entry.knownFacts || []).join("，")
+      );
 
-        const factList = newFacts.split(/[，,、]/).map((s) => s.trim()).filter(Boolean);
+      if (newFacts === null) return;
 
-        const saveResponse = await fetch("/api/knowledge", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            gameName: key,
-            genre: entry.genre,
-            description: entry.description,
-            knownFacts: factList
-          })
-        });
+      const factList = newFacts.split(/[，,、]/).map((s) => s.trim()).filter(Boolean);
 
-        const saveResult = await saveResponse.json();
-        if (saveResult.success) {
-          statusText.textContent = saveResult.message;
-          await loadKnowledge();
-        } else {
-          statusText.textContent = saveResult.message || "保存失败";
-        }
+      const saveResponse = await fetch("/api/knowledge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          gameName: key,
+          genre: entry.genre,
+          description: entry.description,
+          knownFacts: factList
+        })
       });
+
+      const saveResult = await saveResponse.json();
+      if (saveResult.success) {
+        statusText.textContent = saveResult.message;
+        knowledgeDisplayCount = 0;
+        await loadKnowledge();
+      } else {
+        statusText.textContent = saveResult.message || "保存失败";
+      }
     });
+  });
 
-    document.querySelectorAll(".knowledge-delete").forEach((btn) => {
-      btn.addEventListener("click", async (event) => {
-        event.stopPropagation();
-        const key = btn.dataset.key;
-        if (!confirm(`确定要删除《${key}》的知识吗？`)) return;
+  document.querySelectorAll(".knowledge-delete").forEach((btn) => {
+    btn.addEventListener("click", async (event) => {
+      event.stopPropagation();
+      const key = btn.dataset.key;
+      if (!confirm(`确定要删除《${key}》的知识吗？`)) return;
 
-        const response = await fetch(`/api/knowledge/${encodeURIComponent(key)}`, {
-          method: "DELETE"
-        });
-        const result = await response.json();
-
-        if (result.success) {
-          statusText.textContent = result.message;
-          await loadKnowledge();
-        } else {
-          statusText.textContent = result.message || "删除失败";
-        }
+      const delResponse = await fetch(`/api/knowledge/${encodeURIComponent(key)}`, {
+        method: "DELETE"
       });
+      const delResult = await delResponse.json();
+
+      if (delResult.success) {
+        statusText.textContent = delResult.message;
+        knowledgeDisplayCount = 0;
+        await loadKnowledge();
+      } else {
+        statusText.textContent = delResult.message || "删除失败";
+      }
     });
-  } catch (error) {
-    knowledgeList.innerHTML = `<p class="history-meta">${escapeHtml(
-      error.message || "读取知识库失败"
-    )}</p>`;
-  }
+  });
 }
 
 refreshKnowledgeBtn.addEventListener("click", loadKnowledge);
@@ -455,6 +540,33 @@ async function exportData() {
 }
 
 exportBtn.addEventListener("click", exportData);
+
+let searchTimer;
+historySearch.addEventListener("input", () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    historyDisplayCount = 0;
+    renderHistory();
+  }, 300);
+});
+
+knowledgeSearch.addEventListener("input", () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    knowledgeDisplayCount = 0;
+    renderKnowledge();
+  }, 300);
+});
+
+historyMoreBtn.addEventListener("click", () => {
+  historyDisplayCount += PAGE_SIZE;
+  renderHistory();
+});
+
+knowledgeMoreBtn.addEventListener("click", () => {
+  knowledgeDisplayCount += PAGE_SIZE;
+  renderKnowledge();
+});
 
 loadHistory();
 loadKnowledge();

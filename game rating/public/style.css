@@ -89,6 +89,8 @@ body {
   align-self: start;
   position: sticky;
   top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 
 .input-card {
@@ -174,6 +176,43 @@ button:disabled {
   min-height: 360px;
   padding: 0;
   overflow: hidden;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 0 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  background: #f8faff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #5c6bc0;
+  background: #fff;
+}
+
+.more-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.more-btn:hover {
+  border-color: #5c6bc0;
+  color: #5c6bc0;
+  background: #f0f0ff;
 }
 
 .result-card.empty {
