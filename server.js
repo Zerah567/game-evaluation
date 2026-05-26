@@ -539,7 +539,7 @@ app.get("/api/export", async (req, res) => {
 
     res.setHeader("Content-Type", "application/json");
     res.setHeader("Content-Disposition", `attachment; filename="game-rating-export-${new Date().toISOString().slice(0, 10)}.json"`);
-    res.json(exportData);
+    res.send(JSON.stringify(exportData, null, 2));
   } catch (error) {
     res.status(500).json({
       success: false,
