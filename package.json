@@ -4,7 +4,11 @@
   "description": "本地运行的 AI 游戏评分网站",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "cf:dev": "wrangler dev",
+    "cf:deploy": "wrangler deploy",
+    "cf:db:create": "wrangler d1 create game-rating-db",
+    "cf:db:migrate": "wrangler d1 migrations apply game-rating-db --remote"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -13,5 +17,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }
