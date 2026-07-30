@@ -3,82 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI 游戏评分网站</title>
+    <title>Game Intelligence</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <div class="page">
-      <header class="hero">
-        <div>
-          <p class="eyebrow">AI Game Rating</p>
-          <h1>游戏评分网站</h1>
-          <p class="subtitle">
-            输入游戏名称，AI 将根据固定评分体系生成综合评分、维度评分和简短评语。
-          </p>
-        </div>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Game Intelligence 首页">
+          <span class="brand-mark"></span>
+          <span>GAME INTELLIGENCE</span>
+        </a>
+        <div class="topbar-status"><span class="status-dot"></span> AI 评分系统</div>
       </header>
 
-      <main class="layout">
-        <section class="card input-card">
-          <h2>生成游戏评分</h2>
-
-          <form id="reviewForm" class="form">
-            <input
-              id="gameNameInput"
-              type="text"
-              placeholder="例如：原神、黑神话：悟空、王者荣耀"
-              autocomplete="off"
-            />
-            <button id="generateBtn" type="submit">生成评分</button>
-          </form>
-
-          <div class="actions">
-            <button id="regenerateBtn" class="secondary-btn" type="button" hidden>
-              重新生成当前游戏评分
-            </button>
-          </div>
-
-          <p id="statusText" class="status"></p>
-        </section>
-
-        <section id="resultSection" class="card result-card empty">
-          <div class="empty-state">
-            <div class="empty-icon">🎮</div>
-            <h2>等待生成评分</h2>
-            <p>生成结果会显示在这里。</p>
-          </div>
-        </section>
-
-        <aside class="card history-card">
-          <div class="history-header">
-            <h2>本地历史记录</h2>
-            <button id="refreshHistoryBtn" class="text-btn" type="button">
-              刷新
-            </button>
-          </div>
-          <input id="historySearch" class="search-input" type="text" placeholder="搜索历史记录..." />
-          <div id="historyList" class="history-list"></div>
-          <button id="historyMoreBtn" class="more-btn" type="button" hidden>显示更多</button>
-
-          <div class="history-header" style="margin-top:20px;">
-            <h2 id="knowledgeTitle">游戏知识库</h2>
-            <button id="refreshKnowledgeBtn" class="text-btn" type="button">
-              刷新
-            </button>
-          </div>
-          <input id="knowledgeSearch" class="search-input" type="text" placeholder="搜索知识库..." />
-          <p class="status" style="font-size:13px;margin:6px 0 12px;color:var(--muted);">
-            AI 每次评测后自动积累游戏知识，越用越准
+      <main class="workspace">
+        <section class="intro">
+          <p class="kicker">RESEARCH DESK / 01</p>
+          <h1>看见一款游戏的<br /><em>真实势能。</em></h1>
+          <p class="intro-copy">
+            基于产品、玩法、市场和商业化四个维度，建立可追溯的游戏评估。
           </p>
-          <div id="knowledgeList" class="history-list"></div>
-          <button id="knowledgeMoreBtn" class="more-btn" type="button" hidden>显示更多</button>
-
-          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
-            <button id="exportBtn" class="text-btn" type="button">
-              📥 导出全部数据
-            </button>
+          <div class="intro-stats" aria-label="评分体系概览">
+            <div><strong>04</strong><span>核心维度</span></div>
+            <div><strong>42</strong><span>评估指标</span></div>
+            <div><strong>100</strong><span>总分上限</span></div>
           </div>
+        </section>
+
+        <section class="analysis-panel" aria-labelledby="analysis-title">
+          <div class="panel-heading">
+            <div>
+              <p class="section-index">新建分析</p>
+              <h2 id="analysis-title">游戏评估简报</h2>
+            </div>
+            <span class="panel-code">BRIEF / AI</span>
+          </div>
+
+          <form id="reviewForm" class="review-form">
+            <label class="field field-primary">
+              <span>游戏名称 <i>必填</i></span>
+              <input
+                id="gameNameInput"
+                type="text"
+                placeholder="例如：黑神话：悟空"
+                autocomplete="off"
+                maxlength="160"
+              />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>开发商 <i>可选</i></span>
+                <input
+                  id="developerInput"
+                  type="text"
+                  placeholder="例如：游戏科学"
+                  autocomplete="off"
+                  maxlength="160"
+                />
+              </label>
+              <label class="field">
+                <span>游戏链接 <i>可选</i></span>
+                <input
+                  id="gameLinkInput"
+                  type="url"
+                  placeholder="官网、商店页或资料页链接"
+                  autocomplete="url"
+                  maxlength="2048"
+                />
+              </label>
+            </div>
+            <div class="form-footer">
+              <p>补充信息将作为 AI 的参考上下文，不会自动访问链接。</p>
+              <div class="form-actions">
+                <button id="regenerateBtn" class="icon-button" type="button" title="重新生成当前评分" hidden>
+                  <span aria-hidden="true">↻</span><span class="sr-only">重新生成当前评分</span>
+                </button>
+                <button id="generateBtn" class="primary-button" type="submit">生成评估</button>
+              </div>
+            </div>
+          </form>
+          <p id="statusText" class="status" aria-live="polite"></p>
+        </section>
+
+        <section id="resultSection" class="result-panel empty" aria-live="polite">
+          <div class="empty-state">
+            <span class="empty-number">00</span>
+            <div>
+              <p class="section-index">等待输入</p>
+              <h2>开始一份新的<br />游戏评估简报。</h2>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar" aria-label="数据记录">
+          <section class="side-section">
+            <div class="side-heading">
+              <div>
+                <p class="section-index">评分档案</p>
+                <h2>历史记录</h2>
+              </div>
+              <button id="refreshHistoryBtn" class="icon-button" type="button" title="刷新历史记录">
+                <span aria-hidden="true">↻</span><span class="sr-only">刷新历史记录</span>
+              </button>
+            </div>
+            <input id="historySearch" class="search-input" type="search" placeholder="搜索游戏名称" />
+            <div id="historyList" class="history-list"></div>
+            <button id="historyMoreBtn" class="more-button" type="button" hidden>加载更多</button>
+          </section>
+
+          <section class="side-section knowledge-section">
+            <div class="side-heading">
+              <div>
+                <p class="section-index">长期记忆</p>
+                <h2 id="knowledgeTitle">游戏知识库</h2>
+              </div>
+              <button id="refreshKnowledgeBtn" class="icon-button" type="button" title="刷新游戏知识库">
+                <span aria-hidden="true">↻</span><span class="sr-only">刷新游戏知识库</span>
+              </button>
+            </div>
+            <input id="knowledgeSearch" class="search-input" type="search" placeholder="搜索游戏或类型" />
+            <div id="knowledgeList" class="history-list"></div>
+            <button id="knowledgeMoreBtn" class="more-button" type="button" hidden>加载更多</button>
+          </section>
+
+          <button id="exportBtn" class="export-button" type="button">导出本地数据</button>
         </aside>
       </main>
     </div>

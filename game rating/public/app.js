@@ -1,5 +1,7 @@
 const reviewForm = document.getElementById("reviewForm");
 const gameNameInput = document.getElementById("gameNameInput");
+const developerInput = document.getElementById("developerInput");
+const gameLinkInput = document.getElementById("gameLinkInput");
 const generateBtn = document.getElementById("generateBtn");
 const regenerateBtn = document.getElementById("regenerateBtn");
 const statusText = document.getElementById("statusText");
@@ -48,6 +50,8 @@ function setLoading(isLoading, text = "") {
   generateBtn.disabled = isLoading;
   regenerateBtn.disabled = isLoading;
   gameNameInput.disabled = isLoading;
+  developerInput.disabled = isLoading;
+  gameLinkInput.disabled = isLoading;
   statusText.textContent = text;
 
   if (isLoading) {
@@ -61,6 +65,15 @@ function getScoreClass(score) {
   if (score >= 80) return "high";
   if (score >= 60) return "mid";
   return "low";
+}
+
+function getSafeExternalUrl(value) {
+  try {
+    const url = new URL(String(value || ""));
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+  } catch {
+    return "";
+  }
 }
 
 function renderLeafNode(node) {
@@ -140,7 +153,8 @@ function renderReport(report, cached = false) {
   regenerateBtn.hidden = false;
 
   const finalScore = Number(report.finalScore || 0);
-  const degree = Math.max(0, Math.min(100, finalScore)) * 3.6;
+  const scoreWidth = Math.max(0, Math.min(100, finalScore));
+  const safeGameUrl = getSafeExternalUrl(report.gameUrl);
 
   resultSection.classList.remove("empty");
 
@@ -148,6 +162,7 @@ function renderReport(report, cached = false) {
     <div class="report">
       <div class="report-top">
         <div class="report-title">
+          <p class="section-index">评估结果</p>
           <h2>${escapeHtml(report.gameName)}</h2>
           <div class="meta">
             生成时间：${escapeHtml(formatDate(report.createdAt))}
@@ -157,13 +172,28 @@ function renderReport(report, cached = false) {
                 : `<span class="badge">AI 新生成</span>`
             }
           </div>
+          ${
+            report.developer || safeGameUrl
+              ? `<div class="reference-meta">
+                  ${
+                    report.developer
+                      ? `<span>开发商：${escapeHtml(report.developer)}</span>`
+                      : ""
+                  }
+                  ${
+                    safeGameUrl
+                      ? `<a href="${escapeHtml(safeGameUrl)}" target="_blank" rel="noopener noreferrer">查看参考链接</a>`
+                      : ""
+                  }
+                </div>`
+              : ""
+          }
         </div>
 
-        <div class="score-circle" style="--score-deg:${degree}deg;">
-          <div class="score-inner">
-            <div class="score-num">${escapeHtml(finalScore)}</div>
-            <div class="score-label">综合评分 / 100</div>
-          </div>
+        <div class="score-block">
+          <div class="score-num">${escapeHtml(finalScore)}</div>
+          <div class="score-label">综合评分 / 100</div>
+          <div class="score-scale"><span style="width:${scoreWidth}%"></span></div>
         </div>
       </div>
 
@@ -181,6 +211,8 @@ function renderReport(report, cached = false) {
 
 async function generateReview(force = false) {
   const gameName = gameNameInput.value.trim();
+  const developer = developerInput.value.trim();
+  const gameUrl = gameLinkInput.value.trim();
 
   if (!gameName) {
     statusText.textContent = "请输入游戏名称。";
@@ -198,6 +230,8 @@ async function generateReview(force = false) {
       },
       body: JSON.stringify({
         gameName,
+        developer,
+        gameUrl,
         force
       })
     });
@@ -215,6 +249,7 @@ async function generateReview(force = false) {
       : "评分生成成功，并已保存到本地。";
 
     await loadHistory();
+    await loadKnowledge();
   } catch (error) {
     statusText.textContent = error.message || "生成评分失败，请稍后重试。";
   } finally {
@@ -298,6 +333,8 @@ function renderHistory() {
 
       if (item) {
         gameNameInput.value = item.gameName;
+        developerInput.value = item.developer || "";
+        gameLinkInput.value = item.gameUrl || "";
         renderReport(item, true);
         statusText.textContent = "已加载本地历史评分。";
       }
@@ -328,9 +365,11 @@ function renderHistory() {
           resultSection.classList.add("empty");
           resultSection.innerHTML = `
               <div class="empty-state">
-                <div class="empty-icon">🎮</div>
-                <h2>等待生成评分</h2>
-                <p>生成结果会显示在这里。</p>
+                <span class="empty-number">00</span>
+                <div>
+                  <p class="section-index">等待输入</p>
+                  <h2>开始一份新的<br />游戏评估简报。</h2>
+                </div>
               </div>
             `;
           currentGameName = "";

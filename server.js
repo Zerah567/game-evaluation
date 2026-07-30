@@ -159,7 +159,7 @@ function calculateNodeScore(node, leafScores) {
   };
 }
 
-function calculateReport(aiJson, requestedGameName) {
+function calculateReport(aiJson, requestedGameName, reference = {}) {
   const leafScores = aiJson.leafScores || aiJson.scores || {};
 
   const dimensions = scoringSystem.indicators.map((node) =>
@@ -183,6 +183,8 @@ function calculateReport(aiJson, requestedGameName) {
       aiJson.shortComment ||
       aiJson.comment ||
       "该评分由 AI 根据固定评分体系生成，仅供参考。",
+    developer: reference.developer || "",
+    gameUrl: reference.gameUrl || "",
     createdAt: new Date().toISOString(),
     model: OPENAI_MODEL
   };
@@ -216,7 +218,7 @@ function extractJsonFromText(text) {
   }
 }
 
-async function callAiForReview(gameName) {
+async function callAiForReview(gameName, reference = {}) {
   if (!DEEPSEEK_API_KEY) {
     throw new Error("缺少 DEEPSEEK_API_KEY，请在 .env 文件中配置");
   }
@@ -226,10 +228,21 @@ async function callAiForReview(gameName) {
   const knowledge = await readKnowledge();
   const normalized = normalizeGameName(gameName);
   const existingKnowledge = knowledge[normalized] || null;
+  const developer = String(reference.developer || "").trim().slice(0, 160);
+  const gameUrl = String(reference.gameUrl || "").trim().slice(0, 2048);
 
   const knowledgeContext = existingKnowledge
     ? `\n我们已有的关于《${gameName}》的知识：\n${JSON.stringify(existingKnowledge, null, 2)}\n请基于这些已有知识，结合你的判断给出更准确的评分。\n`
     : "";
+
+  const referenceContext =
+    developer || gameUrl
+      ? `
+用户补充的参考信息如下，仅作为评估上下文。不要自动访问链接，也不要把未经证实的信息当作事实：
+${developer ? `- 开发商：${developer}` : ""}
+${gameUrl ? `- 游戏链接：${gameUrl}` : ""}
+`
+      : "";
 
   const systemPrompt = `
 你是一名顶级的专业游戏商业化与游戏设计评测专家，拥有超过20年的游戏行业经验。
@@ -256,7 +269,7 @@ async function callAiForReview(gameName) {
 最终只返回 JSON，不要返回 Markdown，不要返回解释性前后缀。
 `;
 
-  const userPrompt = `
+  const userPrompt = `${referenceContext}
 请评价游戏：《${gameName}》。${knowledgeContext}
 
 评分体系说明：
@@ -365,6 +378,8 @@ app.post("/api/review", async (req, res) => {
   try {
     const gameName = String(req.body.gameName || "").trim();
     const force = Boolean(req.body.force);
+    const developer = String(req.body.developer || "").trim().slice(0, 160);
+    const gameUrl = String(req.body.gameUrl || "").trim().slice(0, 2048);
 
     if (!gameName) {
       return res.status(400).json({
@@ -380,7 +395,7 @@ app.post("/api/review", async (req, res) => {
       (item) => normalizeGameName(item.gameName) === normalized
     );
 
-    if (existing && !force) {
+    if (existing && !force && !developer && !gameUrl) {
       return res.json({
         success: true,
         cached: true,
@@ -388,8 +403,9 @@ app.post("/api/review", async (req, res) => {
       });
     }
 
-    const aiJson = await callAiForReview(gameName);
-    const report = calculateReport(aiJson, gameName);
+    const reference = { developer, gameUrl };
+    const aiJson = await callAiForReview(gameName, reference);
+    const report = calculateReport(aiJson, gameName, reference);
 
     const newReviews = reviews.filter(
       (item) => normalizeGameName(item.gameName) !== normalized
