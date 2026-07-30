@@ -11,9 +11,9 @@ binding = "DB"
 database_name = "game-rating-db"
 # Create the database with `npm run cf:db:create`, then replace this value.
 # This valid placeholder allows local D1 development before the remote database exists.
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "510d0e99-e70d-43cf-8a46-ea5a0cc3f6f8"
 
 [vars]
 OPENAI_BASE_URL = "https://api.deepseek.com"
-OPENAI_MODEL = "deepseek-v4-flash"
+OPENAI_MODEL = "deepseek-v4-pro"
 MAX_REVIEWS = "200"

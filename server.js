@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL || "https://api.deepseek.com";
-const OPENAI_MODEL = process.env.OPENAI_MODEL || "deepseek-v4-flash";
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "deepseek-v4-pro";
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
 const EXPORT_TOKEN = process.env.EXPORT_TOKEN || "";
 

@@ -347,7 +347,7 @@ async function callAiForReview(env, gameName, reference, knowledge) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: env.OPENAI_MODEL || "deepseek-v4-flash",
+      model: env.OPENAI_MODEL || "deepseek-v4-pro",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt }
@@ -399,7 +399,7 @@ async function handleApi(request, env, url) {
 
     const knowledge = await getKnowledge(env, gameKey);
     const aiJson = await callAiForReview(env, gameName, reference, knowledge);
-    const report = calculateReport(aiJson, gameName, reference, env.OPENAI_MODEL || "deepseek-v4-flash");
+    const report = calculateReport(aiJson, gameName, reference, env.OPENAI_MODEL || "deepseek-v4-pro");
 
     await saveReview(env, report, gameKey);
     if (aiJson.gameKnowledge && typeof aiJson.gameKnowledge === "object") {
